@@ -1,234 +1,370 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DroneTech Solutions | Aerial Precision Services</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>DroneTech Solutions | Precision Aerial Services</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="DroneTech Solutions provides precision agricultural spraying, multispectral mapping, thermal inspections, and industrial UAS services across Southeast Texas.">
+  <meta name="keywords" content="drone spraying, agricultural drone, Texas UAS, thermal inspection, multispectral mapping, pipeline inspection, solar inspection">
+  <meta property="og:title" content="DroneTech Solutions">
+  <meta property="og:description" content="Professional agricultural and industrial drone services for Southeast Texas.">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body class="light">
 
 <header class="header">
-    <div class="container nav-container">
-        <h1 class="logo">DroneTech Solutions</h1>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#capabilities">Capabilities</a></li>
-                <li><a href="#why">Why Us</a></li>
-                <li><a href="#founders">Founders</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-            </ul>
-        </nav>
-        <div class="nav-actions">
-            <button id="themeToggle" class="icon-btn" aria-label="Toggle dark mode">🌙</button>
-            <button class="contact-btn" id="openModal">Contact</button>
-        </div>
+  <div class="container nav-container">
+    <h1 class="logo">
+        <img src="images/Dronetechlogo.jpeg" alt="DroneTech Solutions Logo">
+    </h1>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#capabilities">Capabilities</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#why">Why Us</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <button id="themeToggle" class="icon-btn" aria-label="Toggle dark mode">🌙</button>
+      <button class="contact-btn" id="openModal">Contact</button>
+      <button class="hamburger" id="hamburgerBtn">
+        <span></span><span></span><span></span>
+      </button>
     </div>
+  </div>
 </header>
 
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="#capabilities">Capabilities</a>
+  <a href="#services">Services</a>
+  <a href="#why">Why Us</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#pricing">Pricing</a>
+  <button class="mobile-contact" id="openModalMobile">Contact</button>
+</div>
+
 <section class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-        <h2>Precision & Innovation in Aerial Services</h2>
-        <p>Advanced UAS technology backed by decades of public‑service leadership. Delivering agricultural and industrial drone operations across Southeast Texas.</p>
-        <div class="hero-cta">
-            <button class="hero-btn primary" id="openModal2">Request a Consultation</button>
-            <a href="#capabilities" class="hero-btn ghost">View Capabilities</a>
-        </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h2>Precision & Innovation in Aerial Services</h2>
+    <p>Advanced UAS technology backed by decades of public‑service leadership. Delivering agricultural and industrial drone operations across Southeast Texas.</p>
+
+    <div class="hero-cta">
+        <button class="hero-btn primary" id="openModal2">Request a Consultation</button>
+        <a href="#capabilities" class="hero-btn ghost">View Capabilities</a>
     </div>
-    <div class="hero-drone-path"></div>
+
+    <img class="hero-logo" src="images/Dronetechlogo.jpeg" alt="DroneTech Solutions Logo">
+</div>
+
+  </div>
 </section>
 
 <section id="capabilities" class="section fade-in">
-    <h2 class="section-title">Our Core Capabilities</h2>
-    <p class="section-subtitle">Actionable data, precise application, and operational reliability for landowners, farmers, and industrial partners.</p>
+  <h2 class="section-title">Our Core Capabilities</h2>
+  <p class="section-subtitle">Actionable data, precise application, and operational reliability for landowners, farmers, and industrial partners.</p>
 
-    <div class="card-grid">
-        <div class="card">
-            <div class="icon-circle">🌾</div>
-            <img src="images/precision-ag.jpg" alt="Precision Agriculture">
-            <h3>Precision Agriculture</h3>
-            <p>Multispectral imaging and aerial application technology designed to optimize crop health, reduce waste, and maximize ROI.</p>
-        </div>
-
-        <div class="card">
-            <div class="icon-circle">🏭</div>
-            <img src="images/uas-ops.jpg" alt="UAS Operations">
-            <h3>Residential, Commercial & Industrial UAS Operations</h3>
-            <p>Reliable, data‑driven aerial solutions tailored to complex operational requirements across residential, commercial, and industrial environments.</p>
-        </div>
+  <div class="card-grid">
+    <div class="card">
+      <div class="icon-circle">🌾</div>
+      <img src="images/precision-ag.png" alt="Precision Agriculture">
+      <h3>Precision Agriculture</h3>
+      <p>Multispectral imaging and aerial application technology designed to optimize crop health, reduce waste, and maximize ROI.</p>
     </div>
+
+    <div class="card">
+      <div class="icon-circle">🏠</div>
+      <img src="images/uas-ops.jpeg" alt="UAS Operations">
+      <h3>Residential, Commercial & Industrial UAS Operations</h3>
+      <p>Reliable, data‑driven aerial solutions tailored to complex operational requirements across residential, commercial, and industrial environments.</p>
+    </div>
+  </div>
 </section>
 
-<section id="why" class="section alt fade-in">
-    <h2 class="section-title">Why Choose DroneTech Solutions?</h2>
+<section id="services" class="section alt fade-in">
+  <h2 class="section-title">Professional UAS Services</h2>
+  <p class="section-subtitle">Comprehensive aerial solutions for agriculture, industry, and infrastructure.</p>
 
-    <div class="why-grid">
-        <div class="why-item">
-            <h4>Professional Foundation</h4>
-            <p>Led by seasoned public‑service professionals who bring discipline, safety, and operational integrity to every mission.</p>
-        </div>
-
-        <div class="why-item">
-            <h4>Certified Expertise</h4>
-            <p>FAA Part 107 remote pilots and TDA‑licensed commercial pesticide applicators ensure compliance, precision, and safety.</p>
-        </div>
-
-        <div class="why-item">
-            <h4>Local Commitment</h4>
-            <p>Deeply committed to Southeast Texas agriculture and industry, with a focus on long‑term relationships and reliable results.</p>
-        </div>
-
-        <div class="why-item">
-            <h4>Data‑Driven Decisions</h4>
-            <p>From crop health to asset inspection, we deliver actionable insights—not just imagery—so you can make confident decisions.</p>
-        </div>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon">🌾</div>
+      <h4>Aerial Spraying</h4>
+      <p>Precision application for crops, pastures, and aquatic environments.</p>
     </div>
+    <div class="service-card">
+      <div class="service-icon">🛰️</div>
+      <h4>Multispectral Mapping</h4>
+      <p>Crop health, moisture analysis, and vegetation indexing.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🔥</div>
+      <h4>Thermal Inspection</h4>
+      <p>Solar farms, electrical systems, and industrial heat signatures.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🔧</div>
+      <h4>Pipeline Inspection</h4>
+      <p>Safe, efficient monitoring of critical infrastructure.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">⚡</div>
+      <h4>Powerline Inspection</h4>
+      <p>High‑resolution imaging for utility maintenance.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🏠</div>
+      <h4>Roof & Property Imaging</h4>
+      <p>Residential and commercial aerial assessments.</p>
+    </div>
+  </div>
 </section>
 
-<section id="founders" class="section fade-in">
-    <h2 class="section-title">Meet the Founders</h2>
+<section id="why" class="section fade-in">
+  <h2 class="section-title">Why Choose DroneTech Solutions?</h2>
 
-    <div class="founder-grid">
-        <div class="founder-card">
-            <img src="images/ronnie.jpg" alt="Ronnie Denton">
-            <h3>Ronnie Denton</h3>
-            <p>With 30 years of dedicated public fire service, Ronnie retired as a Battalion Chief in 2019. Now serving as a law enforcement officer, he brings integrity, clear communication, and operational excellence to every project.</p>
-            <p>As a certified FAA Part 107 UAS remote pilot and TDA Certified Commercial Pesticide Applicator, Ronnie is driven by precision, efficiency, and innovative, data‑driven solutions for Southeast Texas landowners and industry partners.</p>
-        </div>
-
-        <div class="founder-card">
-            <img src="images/jake.jpg" alt="Jake Messer">
-            <h3>Jake Messer</h3>
-            <p>Jake is a Captain with the Beaumont Fire Department, bringing over a decade of high‑stakes emergency management and leadership experience.</p>
-            <p>An experienced pilot, FAA UAS remote pilot, and TDA Certified Commercial Pesticide Applicator, Jake focuses on delivering reliable, high‑quality results built on experience, trust, and professional integrity.</p>
-        </div>
+  <div class="why-grid">
+    <div class="why-item">
+      <h4>Professional Foundation</h4>
+      <p>Led by seasoned public‑service professionals who bring discipline, safety, and operational integrity to every mission.</p>
     </div>
+
+    <div class="why-item">
+      <h4>Certified Expertise</h4>
+      <p>FAA Part 107 remote pilots and TDA‑licensed commercial pesticide applicators ensure compliance, precision, and safety.</p>
+    </div>
+
+    <div class="why-item">
+      <h4>Local Commitment</h4>
+      <p>Deeply committed to Southeast Texas agriculture and industry, with a focus on long‑term relationships and reliable results.</p>
+    </div>
+
+    <div class="why-item">
+      <h4>Data‑Driven Decisions</h4>
+      <p>From crop health to asset inspection, we deliver actionable insights—not just imagery—so you can make confident decisions.</p>
+    </div>
+  </div>
+
+  <div class="why-visual">
+    <img src="images/drone-vs-ground.jpeg" alt="Sprayer drone vs ground sprayer comparison">
+  </div>
 </section>
 
-<section id="gallery" class="section alt fade-in">
-    <h2 class="section-title">Operational Gallery</h2>
-    <p class="section-subtitle">A glimpse into our aerial operations, agricultural applications, and inspection work.</p>
+<section id="founders" class="section alt fade-in">
+  <h2 class="section-title">Meet the Founders</h2>
 
-    <div class="gallery-grid">
-        <img src="images/gallery1.jpg" alt="Drone over field" class="gallery-item">
-        <img src="images/gallery2.jpg" alt="Aerial crop view" class="gallery-item">
-        <img src="images/gallery3.jpg" alt="Industrial inspection" class="gallery-item">
-        <img src="images/gallery4.jpg" alt="Pond treatment" class="gallery-item">
+  <div class="founder-grid">
+    <div class="founder-card">
+      <div class="founder-placeholder">RD</div>
+      <h3>Ronnie Denton</h3>
+      <p>With 30 years of dedicated public fire service, Ronnie retired as a Battalion Chief in 2019. Now serving as a law enforcement officer, he brings integrity, clear communication, and operational excellence to every project.</p>
+      <p>As a certified FAA Part 107 UAS remote pilot and TDA Certified Commercial Pesticide Applicator, Ronnie is driven by precision, efficiency, and innovative, data‑driven solutions for Southeast Texas landowners and industry partners.</p>
     </div>
+
+    <div class="founder-card">
+      <div class="founder-placeholder">JM</div>
+      <h3>Jake Messer</h3>
+      <p>Jake is a Captain with the Beaumont Fire Department, bringing over a decade of high‑stakes emergency management and leadership experience.</p>
+      <p>An experienced pilot, FAA UAS remote pilot, and TDA Certified Commercial Pesticide Applicator, Jake focuses on delivering reliable, high‑quality results built on experience, trust, and professional integrity.</p>
+    </div>
+  </div>
+</section>
+
+<section id="gallery" class="section fade-in">
+  <h2 class="section-title">Operational Gallery</h2>
+  <p class="section-subtitle">A glimpse into our aerial operations, agricultural applications, and inspection work.</p>
+
+  <div class="gallery-grid">
+    <img src="images/gallery1.jpeg" alt="Drone over crop field" class="gallery-item">
+    <img src="images/gallery2.jpeg" alt="Drone over solar farm" class="gallery-item">
+    <img src="images/gallery3.png" alt="Drone inspecting pipelines" class="gallery-item">
+    <img src="images/gallery4.png" alt="Drone near power lines" class="gallery-item">
+    <img src="images/gallery5.png" alt="Drone over forest" class="gallery-item">
+    <img src="images/gallery6.png" alt="Smart farming sensor and drone" class="gallery-item">
+    <img src="images/gallery7.png" alt="Smart farming sensor" class="gallery-item">
+    <img src="images/gallery8.jpeg" alt="Drone over solar farm" class="gallery-item">
+  </div>
+</section>
+
+<section id="service-area" class="section alt fade-in">
+  <h2 class="section-title">Service Area</h2>
+  <p class="section-subtitle">Proudly serving Southeast Texas and surrounding regions.</p>
+
+  <div class="service-map">
+    <img src="images\Texas_Map-SETX.PNG" alt="Service area visual">
+  </div>
 </section>
 
 <section id="pricing" class="section fade-in">
-    <h2 class="section-title">Pricing Overview</h2>
-    <p class="pricing-note">Full rate sheets and project‑specific quotes are available upon request.</p>
+  <h2 class="section-title">Pricing Overview</h2>
+  <p class="pricing-note">Full rate sheets and project‑specific quotes are available upon request.</p>
 
-    <div class="pricing-wrapper">
-        <div class="pricing-box">
-            <h3>Agricultural & Aquatic Spraying</h3>
-            <ul>
-                <li>Mobilization Fee: <strong>$150</strong> (waived within 50 miles)</li>
-                <li>Standard Application: <strong>$16–$22 per acre</strong></li>
-                <li>Pond/Aquatic Treatment: <strong>$300–$700 per hour</strong></li>
-                <li>Farm Bureau Members: <strong>10% discount</strong></li>
-            </ul>
-            <p class="min-charge">40‑acre minimum applies.</p>
-        </div>
-
-        <div class="pricing-box">
-            <h3>Precision Mapping & Inspection</h3>
-            <ul>
-                <li>Multispectral Imaging: <strong>$20–$35 per acre</strong></li>
-                <li>Thermal Inspection: <strong>$300–$700 per hour</strong></li>
-                <li>1‑d‑1 Appraisal Support included with treatment report.</li>
-            </ul>
-            <p class="min-charge">40‑acre minimum applies.</p>
-        </div>
+  <div class="pricing-wrapper">
+    <div class="pricing-box">
+      <h3>Agricultural & Aquatic Spraying</h3>
+      <ul>
+        <li>Mobilization Fee: <strong>$150</strong> (waived within 50 miles)</li>
+        <li>Standard Application: <strong>$16–$22 per acre</strong></li>
+        <li>Pond/Aquatic Treatment: <strong>$300–$700 per hour</strong></li>
+        <li>Farm Bureau Members: <strong>10% discount</strong></li>
+      </ul>
+      <p class="min-charge">40‑acre minimum applies.</p>
     </div>
 
-    <div class="pricing-cta">
-        <button class="hero-btn primary" id="openQuote">Request a Detailed Quote</button>
+    <div class="pricing-box">
+      <h3>Precision Mapping & Inspection</h3>
+      <ul>
+        <li>Multispectral Imaging: <strong>$4–$20 per acre</strong></li>
+        <li>Thermal Inspection: <strong>$300–$700 per hour</strong></li>
+        <li>1‑d‑1 Appraisal Support included with treatment report.</li>
+      </ul>
+      <p class="min-charge">40‑acre minimum applies.</p>
     </div>
+  </div>
+
+  <div class="pricing-cta">
+    <button class="hero-btn primary" id="openQuote">Request a Detailed Quote</button>
+  </div>
+</section>
+
+<section id="testimonials" class="section fade-in">
+  <h2 class="section-title">What Our Clients Say</h2>
+
+  <div class="testimonial-grid">
+    <div class="testimonial-card">
+      <p>"DroneTech Solutions delivered fast, accurate spraying that saved us time and money."</p>
+      <strong>— Local Rancher</strong>
+    </div>
+
+    <div class="testimonial-card">
+      <p>"Their mapping helped us identify crop stress early. Highly professional team."</p>
+      <strong>— Agricultural Client</strong>
+    </div>
+
+    <div class="testimonial-card">
+      <p>"Reliable, safe, and extremely knowledgeable. We trust them with our inspections."</p>
+      <strong>— Industrial Partner</strong>
+    </div>
+  </div>
+</section>
+
+<section class="cert-bar">
+  <div>🛡️ FAA Part 107 Certified</div>
+  <div>🌱 TDA Commercial Applicator</div>
+  <div>📊 Fully Insured Operations</div>
+  <div>🚁 Professional Public‑Service Background</div>
 </section>
 
 <footer class="footer">
-    <p>© 2026 DroneTech Solutions — Professional UAS Services for Southeast Texas</p>
+    <div class="footer-logo">
+        <img src="images/Dronetechlogo.jpeg" alt="DroneTech Solutions Logo">
+    </div>
+  <div class="footer-grid">
+    <div>
+      <h4>DroneTech Solutions</h4>
+      <p>Precision agricultural and industrial UAS services for Southeast Texas.</p>
+    </div>
+
+    <div>
+      <h4>Services</h4>
+      <a href="#services">Aerial Spraying</a>
+      <a href="#services">Mapping & Imaging</a>
+      <a href="#services">Thermal Inspection</a>
+      <a href="#services">Industrial Monitoring</a>
+    </div>
+
+    <div>
+      <h4>Contact</h4>
+      <p>Ronnie: (903) 477‑1798</p>
+      <p>Jake: (936) 238‑9633</p>
+    </div>
+  </div>
+
+  <p class="footer-bottom">© 2026 DroneTech Solutions — All Rights Reserved</p>
 </footer>
 
-<!-- CONTACT / QUOTE MODAL -->
+<!-- CONTACT MODAL -->
 <div id="contactModal" class="modal">
-    <div class="modal-content">
-        <span id="closeModal" class="close">&times;</span>
-        <h2>Contact DroneTech Solutions</h2>
+  <div class="modal-content">
+    <span id="closeModal" class="close">&times;</span>
+    <h2>Contact DroneTech Solutions</h2>
 
-        <!-- Netlify-ready form structure -->
-        <form id="contactForm" name="dronetech-contact" data-netlify="true">
-            <input type="hidden" name="form-name" value="dronetech-contact">
+    <form id="contactForm" name="dronetech-contact" data-netlify="true">
+      <input type="hidden" name="form-name" value="dronetech-contact">
 
-            <div class="step-indicator">
-                <span class="step-dot active" data-step="1"></span>
-                <span class="step-dot" data-step="2"></span>
-            </div>
+      <div class="step-indicator">
+        <span class="step-dot active" data-step="1"></span>
+        <span class="step-dot" data-step="2"></span>
+      </div>
 
-            <div class="form-step active" data-step="1">
-                <label>Name</label>
-                <input type="text" name="name" required>
+      <div class="form-step active" data-step="1">
+        <label>Name</label>
+        <input type="text" name="name" required>
 
-                <label>Phone</label>
-                <input type="text" name="phone" required>
+        <label>Phone</label>
+        <input type="text" name="phone" required>
 
-                <label>Email</label>
-                <input type="email" name="email" required>
+        <label>Email</label>
+        <input type="email" name="email" required>
 
-                <label>Preferred Contact Method</label>
-                <select name="contact_method">
-                    <option value="phone">Phone</option>
-                    <option value="email">Email</option>
-                    <option value="either">Either</option>
-                </select>
+        <label>Preferred Contact Method</label>
+        <select name="contact_method">
+          <option value="phone">Phone</option>
+          <option value="email">Email</option>
+          <option value="either">Either</option>
+        </select>
 
-                <button type="button" class="send-btn next-step">Next</button>
-            </div>
+        <button type="button" class="send-btn next-step">Next</button>
+      </div>
 
-            <div class="form-step" data-step="2">
-                <label>Service Type</label>
-                <select name="service_type">
-                    <option value="ag-spraying">Agricultural / Aquatic Spraying</option>
-                    <option value="precision-mapping">Precision Mapping & Inspection</option>
-                    <option value="other">Other / Not Sure</option>
-                </select>
+      <div class="form-step" data-step="2">
+        <label>Service Type</label>
+        <select name="service_type">
+          <option value="ag-spraying">Agricultural / Aquatic Spraying</option>
+          <option value="precision-mapping">Precision Mapping & Inspection</option>
+          <option value="other">Other / Not Sure</option>
+        </select>
 
-                <label>Service Location (City / County)</label>
-                <input type="text" name="location">
+        <label>Service Location (City / County)</label>
+        <input type="text" name="location">
 
-                <label>Description of Request</label>
-                <textarea name="description" required></textarea>
+        <label>Description of Request</label>
+        <textarea name="description" required></textarea>
 
-                <div class="step-actions">
-                    <button type="button" class="ghost-btn prev-step">Back</button>
-                    <button type="submit" class="send-btn">Send</button>
-                </div>
-            </div>
-        </form>
-
-        <div class="contact-direct">
-            <h3>Or reach us directly:</h3>
-            <p><strong>Ronnie Denton</strong><br>
-            Phone: (903) 477‑1798<br>
-            Email: rdenton@dtsolutions.org</p>
-
-            <p><strong>Jake Messer</strong><br>
-            Phone: (936) 238‑9633<br>
-            Email: jmesser@dtsolutions.org</p>
+        <div class="step-actions">
+          <button type="button" class="ghost-btn prev-step">Back</button>
+          <button type="submit" class="send-btn">Send</button>
         </div>
+      </div>
+    </form>
+
+    <div class="contact-direct">
+      <h3>Or reach us directly:</h3>
+      <p><strong>Ronnie Denton</strong><br>
+        Phone: (903) 477‑1798<br>
+        Email: rdenton@dtsolutions.org</p>
+
+      <p><strong>Jake Messer</strong><br>
+        Phone: (936) 238‑9633<br>
+        Email: jmesser@dtsolutions.org</p>
     </div>
+  </div>
 </div>
 
-<!-- LIGHTBOX FOR GALLERY -->
+<!-- LIGHTBOX -->
 <div id="lightbox" class="lightbox">
-    <span class="lightbox-close">&times;</span>
-    <img class="lightbox-img" src="" alt="">
+  <span class="lightbox-close">&times;</span>
+  <img class="lightbox-img" src="" alt="">
 </div>
+
+<!-- FLOATING BUTTONS -->
+<a href="tel:9034771798" class="float-call">📞 Call Now</a>
+<button class="float-quote" id="floatQuote">Request Quote</button>
 
 <script src="script.js"></script>
 </body>
