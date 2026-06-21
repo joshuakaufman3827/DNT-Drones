@@ -1,373 +1,675 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
-  <meta charset="UTF-8">
-  <title>DroneTech Solutions | Precision Aerial Services</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <meta name="description" content="DroneTech Solutions provides precision agricultural spraying, multispectral mapping, thermal inspections, and industrial UAS services across Southeast Texas.">
-  <meta name="keywords" content="drone spraying, agricultural drone, Texas UAS, thermal inspection, multispectral mapping, pipeline inspection, solar inspection">
-  <meta property="og:title" content="DroneTech Solutions">
-  <meta property="og:description" content="Professional agricultural and industrial drone services for Southeast Texas.">
-  <meta property="og:type" content="website">
-
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <title>DroneTech Solutions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="light">
 
-<header class="header">
-  <div class="container nav-container">
-    <h1 class="logo">
-        <img src="images/Dronetechlogo.jpeg" alt="DroneTech Solutions Logo">
-    </h1>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="#capabilities">Capabilities</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#why">Why Us</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#pricing">Pricing</a></li>
-      </ul>
-    </nav>
-    <div class="nav-actions">
-      <button id="themeToggle" class="icon-btn" aria-label="Toggle dark mode">🌙</button>
-      <button class="contact-btn" id="openModal">Contact</button>
-      <button class="hamburger" id="hamburgerBtn">
-        <span></span><span></span><span></span>
-      </button>
+<body class="dark">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-inner">
+      <div class="logo-text">DroneTech Solutions</div>
+      <nav class="nav-links">
+        <button class="nav-link" onclick="scrollToSection('services')">Services</button>
+        <button class="nav-link" onclick="scrollToSection('aquatic')">Aquatic</button>
+        <button class="nav-link" onclick="scrollToSection('solar')">Solar</button>
+        <button class="nav-link" onclick="scrollToSection('wildlife')">Wildlife</button>
+        <button class="nav-link" onclick="scrollToSection('about')">About</button>
+        <button class="nav-link primary-nav" id="openModalNav">Request a Quote</button>
+        <button class="theme-toggle" id="themeToggle">☾</button>
+      </nav>
     </div>
-  </div>
-</header>
+  </header>
 
-<!-- MOBILE NAV -->
-<div class="mobile-nav" id="mobileNav">
-  <a href="#capabilities">Capabilities</a>
-  <a href="#services">Services</a>
-  <a href="#why">Why Us</a>
-  <a href="#gallery">Gallery</a>
-  <a href="#pricing">Pricing</a>
-  <button class="mobile-contact" id="openModalMobile">Contact</button>
-</div>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
 
-<section class="hero">
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <h2>Precision & Innovation in Aerial Services</h2>
-    <p>Advanced UAS technology backed by decades of public‑service leadership. Delivering agricultural and industrial drone operations across Southeast Texas.</p>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-pill">FAA Certified • Precision Aerial Services</div>
 
-    <div class="hero-cta">
-        <button class="hero-btn primary" id="openModal2">Request a Consultation</button>
-        <a href="#capabilities" class="hero-btn ghost">View Capabilities</a>
-    </div>
+        <h1 class="hero-title">Data‑Driven Drone Operations for Land, Water & Solar Assets</h1>
 
-    <img class="hero-logo" src="images/Dronetechlogo.jpeg" alt="DroneTech Solutions Logo">
-</div>
+        <p class="hero-subtitle">
+          From precision spraying and aquatic management to solar diagnostics and wildlife surveys,
+          DroneTech Solutions delivers professional, safe, and measurable results across Southeast Texas.
+        </p>
 
-  </div>
-</section>
+        <div class="hero-actions">
+          <button class="btn btn-primary" id="openModalHero">Request a Quote</button>
+          <button class="btn btn-ghost" onclick="scrollToSection('services')">Explore Services</button>
+        </div>
 
-<section id="capabilities" class="section fade-in">
-  <h2 class="section-title">Our Core Capabilities</h2>
-  <p class="section-subtitle">Actionable data, precise application, and operational reliability for landowners, farmers, and industrial partners.</p>
-
-  <div class="card-grid">
-    <div class="card">
-      <div class="icon-circle">🌾</div>
-      <img src="images/precision-ag.png" alt="Precision Agriculture">
-      <h3>Precision Agriculture</h3>
-      <p>Multispectral imaging and aerial application technology designed to optimize crop health, reduce waste, and maximize ROI.</p>
-    </div>
-
-    <div class="card">
-      <div class="icon-circle">🏠</div>
-      <img src="images/uas-ops.jpeg" alt="UAS Operations">
-      <h3>Residential, Commercial & Industrial UAS Operations</h3>
-      <p>Reliable, data‑driven aerial solutions tailored to complex operational requirements across residential, commercial, and industrial environments.</p>
-    </div>
-  </div>
-</section>
-
-<section id="services" class="section alt fade-in">
-  <h2 class="section-title">Professional UAS Services</h2>
-  <p class="section-subtitle">Comprehensive aerial solutions for agriculture, industry, and infrastructure.</p>
-
-  <div class="services-grid">
-    <div class="service-card">
-      <div class="service-icon">🌾</div>
-      <h4>Aerial Spraying</h4>
-      <p>Precision application for crops, pastures, and aquatic environments.</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">🛰️</div>
-      <h4>Multispectral Mapping</h4>
-      <p>Crop health, moisture analysis, and vegetation indexing.</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">🔥</div>
-      <h4>Thermal Inspection</h4>
-      <p>Solar farms, electrical systems, and industrial heat signatures.</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">🔧</div>
-      <h4>Pipeline Inspection</h4>
-      <p>Safe, efficient monitoring of critical infrastructure.</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">⚡</div>
-      <h4>Powerline Inspection</h4>
-      <p>High‑resolution imaging for utility maintenance.</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">🏠</div>
-      <h4>Roof & Property Imaging</h4>
-      <p>Residential and commercial aerial assessments.</p>
-    </div>
-  </div>
-</section>
-
-<section id="why" class="section fade-in">
-  <h2 class="section-title">Why Choose DroneTech Solutions?</h2>
-
-  <div class="why-grid">
-    <div class="why-item">
-      <h4>Professional Foundation</h4>
-      <p>Led by seasoned public‑service professionals who bring discipline, safety, and operational integrity to every mission.</p>
-    </div>
-
-    <div class="why-item">
-      <h4>Certified Expertise</h4>
-      <p>FAA Part 107 remote pilots and TDA‑licensed commercial pesticide applicators ensure compliance, precision, and safety.</p>
-    </div>
-
-    <div class="why-item">
-      <h4>Local Commitment</h4>
-      <p>Deeply committed to Southeast Texas agriculture and industry, with a focus on long‑term relationships and reliable results.</p>
-    </div>
-
-    <div class="why-item">
-      <h4>Data‑Driven Decisions</h4>
-      <p>From crop health to asset inspection, we deliver actionable insights—not just imagery—so you can make confident decisions.</p>
-    </div>
-  </div>
-
-  <div class="why-visual">
-    <img src="images/drone-vs-ground.jpeg" alt="Sprayer drone vs ground sprayer comparison">
-  </div>
-</section>
-
-<section id="founders" class="section alt fade-in">
-  <h2 class="section-title">Meet the Founders</h2>
-
-  <div class="founder-grid">
-    <div class="founder-card">
-      <div class="founder-placeholder">RD</div>
-      <h3>Ronnie Denton</h3>
-      <p>With 30 years of dedicated public fire service, Ronnie retired as a Battalion Chief in 2019. Now serving as a law enforcement officer, he brings integrity, clear communication, and operational excellence to every project.</p>
-      <p>As a certified FAA Part 107 UAS remote pilot and TDA Certified Commercial Pesticide Applicator, Ronnie is driven by precision, efficiency, and innovative, data‑driven solutions for Southeast Texas landowners and industry partners.</p>
-    </div>
-
-    <div class="founder-card">
-      <div class="founder-placeholder">JM</div>
-      <h3>Jake Messer</h3>
-      <p>Jake is a Captain with the Beaumont Fire Department, bringing over a decade of high‑stakes emergency management and leadership experience.</p>
-      <p>An experienced pilot, FAA UAS remote pilot, and TDA Certified Commercial Pesticide Applicator, Jake focuses on delivering reliable, high‑quality results built on experience, trust, and professional integrity.</p>
-    </div>
-  </div>
-</section>
-
-<section id="gallery" class="section fade-in">
-  <h2 class="section-title">Operational Gallery</h2>
-  <p class="section-subtitle">A glimpse into our aerial operations, agricultural applications, and inspection work.</p>
-
-  <div class="gallery-grid">
-    <img src="images/gallery1.jpeg" alt="Drone over crop field" class="gallery-item">
-    <img src="images/gallery2.jpeg" alt="Drone over solar farm" class="gallery-item">
-    <img src="images/gallery3.png" alt="Drone inspecting pipelines" class="gallery-item">
-    <img src="images/gallery4.png" alt="Drone near power lines" class="gallery-item">
-    <img src="images/gallery5.png" alt="Drone over forest" class="gallery-item">
-    <img src="images/gallery6.png" alt="Smart farming sensor and drone" class="gallery-item">
-    <img src="images/gallery7.png" alt="Smart farming sensor" class="gallery-item">
-    <img src="images/gallery8.jpeg" alt="Drone over solar farm" class="gallery-item">
-  </div>
-</section>
-
-<section id="service-area" class="section alt fade-in">
-  <h2 class="section-title">Service Area</h2>
-  <p class="section-subtitle">Proudly serving Southeast Texas and surrounding regions.</p>
-
-  <div class="service-map">
-    <img src="images\Texas_Map-SETX.PNG" alt="Service area visual">
-  </div>
-</section>
-
-<section id="pricing" class="section fade-in">
-  <h2 class="section-title">Pricing Overview</h2>
-  <p class="pricing-note">Full rate sheets and project‑specific quotes are available upon request.</p>
-
-  <div class="pricing-wrapper">
-    <div class="pricing-box">
-      <h3>Agricultural & Aquatic Spraying</h3>
-      <ul>
-        <li>Mobilization Fee: <strong>$150</strong> (waived within 50 miles)</li>
-        <li>Standard Application: <strong>$16–$22 per acre</strong></li>
-        <li>Pond/Aquatic Treatment: <strong>$300–$700 per hour</strong></li>
-        <li>Farm Bureau Members: <strong>10% discount</strong></li>
-      </ul>
-      <p class="min-charge">40‑acre minimum applies.</p>
-    </div>
-
-    <div class="pricing-box">
-      <h3>Precision Mapping & Inspection</h3>
-      <ul>
-        <li>Multispectral Imaging: <strong>$4–$20 per acre</strong></li>
-        <li>Thermal Inspection: <strong>$300–$700 per hour</strong></li>
-        <li>1‑d‑1 Appraisal Support included with treatment report.</li>
-      </ul>
-      <p class="min-charge">40‑acre minimum applies.</p>
-    </div>
-  </div>
-
-  <div class="pricing-cta">
-    <button class="hero-btn primary" id="openQuote">Request a Detailed Quote</button>
-  </div>
-</section>
-
-<section id="testimonials" class="section fade-in">
-  <h2 class="section-title">What Our Clients Say</h2>
-
-  <div class="testimonial-grid">
-    <div class="testimonial-card">
-      <p>"DroneTech Solutions delivered fast, accurate spraying that saved us time and money."</p>
-      <strong>— Local Rancher</strong>
-    </div>
-
-    <div class="testimonial-card">
-      <p>"Their mapping helped us identify crop stress early. Highly professional team."</p>
-      <strong>— Agricultural Client</strong>
-    </div>
-
-    <div class="testimonial-card">
-      <p>"Reliable, safe, and extremely knowledgeable. We trust them with our inspections."</p>
-      <strong>— Industrial Partner</strong>
-    </div>
-  </div>
-</section>
-
-<section class="cert-bar">
-  <div>🛡️ FAA Part 107 Certified</div>
-  <div>🌱 TDA Commercial Applicator</div>
-  <div>📊 Fully Insured Operations</div>
-  <div>🚁 Professional Public‑Service Background</div>
-</section>
-
-<footer class="footer">
-    <div class="footer-logo">
-        <img src="images/Dronetechlogo.jpeg" alt="DroneTech Solutions Logo">
-    </div>
-  <div class="footer-grid">
-    <div>
-      <h4>DroneTech Solutions</h4>
-      <p>Precision agricultural and industrial UAS services for Southeast Texas.</p>
-    </div>
-
-    <div>
-      <h4>Services</h4>
-      <a href="#services">Aerial Spraying</a>
-      <a href="#services">Mapping & Imaging</a>
-      <a href="#services">Thermal Inspection</a>
-      <a href="#services">Industrial Monitoring</a>
-    </div>
-
-    <div>
-      <h4>Contact</h4>
-      <p>Ronnie: (903) 477‑1798</p>
-      <p>Jake: (936) 238‑9633</p>
-    </div>
-  </div>
-
-  <p class="footer-bottom">© 2026 DroneTech Solutions — All Rights Reserved</p>
-</footer>
-
-<!-- CONTACT MODAL -->
-<div id="contactModal" class="modal">
-  <div class="modal-content">
-    <span id="closeModal" class="close">&times;</span>
-    <h2>Contact DroneTech Solutions</h2>
-
-    <form id="contactForm" name="dronetech-contact" data-netlify="true">
-      <input type="hidden" name="form-name" value="dronetech-contact">
-
-      <div class="step-indicator">
-        <span class="step-dot active" data-step="1"></span>
-        <span class="step-dot" data-step="2"></span>
-      </div>
-
-      <div class="form-step active" data-step="1">
-        <label>Name</label>
-        <input type="text" name="name" required>
-
-        <label>Phone</label>
-        <input type="text" name="phone" required>
-
-        <label>Email</label>
-        <input type="email" name="email" required>
-
-        <label>Preferred Contact Method</label>
-        <select name="contact_method">
-          <option value="phone">Phone</option>
-          <option value="email">Email</option>
-          <option value="either">Either</option>
-        </select>
-
-        <button type="button" class="send-btn next-step">Next</button>
-      </div>
-
-      <div class="form-step" data-step="2">
-        <label>Service Type</label>
-        <select name="service_type">
-          <option value="ag-spraying">Agricultural / Aquatic Spraying</option>
-          <option value="precision-mapping">Precision Mapping & Inspection</option>
-          <option value="other">Other / Not Sure</option>
-        </select>
-
-        <label>Service Location (City / County)</label>
-        <input type="text" name="location">
-
-        <label>Description of Request</label>
-        <textarea name="description" required></textarea>
-
-        <div class="step-actions">
-          <button type="button" class="ghost-btn prev-step">Back</button>
-          <button type="submit" class="send-btn">Send</button>
+        <div class="hero-meta">
+          <span>Serving all of Southeast Texas</span>
+          <span class="dot"></span>
+          <span>DroneTech Solutions & SolarGuard Solutions</span>
         </div>
       </div>
-    </form>
+    </div>
+  </section>
 
-    <div class="contact-direct">
-      <h3>Or reach us directly:</h3>
-      <p><strong>Ronnie Denton</strong><br>
-        Phone: (903) 477‑1798<br>
-        Email: rdenton@dtsolutions.org</p>
+  <!-- SERVICES -->
+  <section class="section" id="services">
+    <div class="container">
 
-      <p><strong>Jake Messer</strong><br>
-        Phone: (936) 238‑9633<br>
-        Email: jmesser@dtsolutions.org</p>
+      <div class="section-header">
+        <p class="section-kicker">Core Aerial Services</p>
+        <h2 class="section-title">Precision Spraying, Mapping & Inspection</h2>
+        <p class="section-subtitle">
+          Integrated drone operations for agriculture, vegetation management, infrastructure, and more.
+        </p>
+      </div>
+
+      <div class="card-grid-3">
+
+        <!-- SERVICE CARD 1 -->
+        <article class="service-card hover-glow">
+          <h3 class="service-card-title">Precision Spraying & Application</h3>
+          <p class="service-card-text">
+            Targeted aerial application for crops, pastures, and right‑of‑way vegetation using
+            calibrated, drone‑based delivery systems.
+          </p>
+          <ul class="service-list">
+            <li><span class="service-dot"></span>Reduced ground compaction and crop damage</li>
+            <li><span class="service-dot"></span>Consistent GPS‑guided coverage</li>
+            <li><span class="service-dot"></span>Ideal for hard‑to‑reach or sensitive areas</li>
+          </ul>
+          <button class="link-button" id="openModalSpray">Request Spraying Quote →</button>
+        </article>
+
+        <!-- SERVICE CARD 2 -->
+        <article class="service-card hover-glow">
+          <h3 class="service-card-title">Aerial Mapping & Documentation</h3>
+          <p class="service-card-text">
+            High‑resolution RGB and thermal mapping for fields, facilities, and infrastructure.
+          </p>
+          <ul class="service-list">
+            <li><span class="service-dot"></span>Orthomosaic maps and elevation models</li>
+            <li><span class="service-dot"></span>Progress documentation for projects</li>
+            <li><span class="service-dot"></span>Actionable visuals for planning and reporting</li>
+          </ul>
+          <button class="link-button" id="openModalMap">Schedule a Mapping Flight →</button>
+        </article>
+
+        <!-- SERVICE CARD 3 -->
+        <article class="service-card hover-glow">
+          <h3 class="service-card-title">Industrial & Infrastructure Inspection</h3>
+          <p class="service-card-text">
+            Safe, remote inspection of elevated or hazardous structures using advanced sensors.
+          </p>
+          <ul class="service-list">
+            <li><span class="service-dot"></span>Reduce risk to personnel</li>
+            <li><span class="service-dot"></span>Thermal and visual data in one workflow</li>
+            <li><span class="service-dot"></span>Detailed reporting for maintenance planning</li>
+          </ul>
+          <button class="link-button" id="openModalInfra">Discuss an Inspection Project →</button>
+        </article>
+
+      </div>
+
+      <!-- SERVICES IMAGE STRIP -->
+      <div class="image-strip">
+        <div class="image-square hover-glow">
+          <img src="images/services-1.jpg" alt="Drone spraying field">
+        </div>
+        <div class="image-square hover-glow">
+          <img src="images/services-2.jpg" alt="Aerial mapping">
+        </div>
+        <div class="image-square hover-glow">
+          <img src="images/services-3.jpg" alt="Industrial inspection">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- AQUATIC -->
+  <section class="section section-alt" id="aquatic">
+    <div class="container">
+
+      <div class="section-header">
+        <p class="section-kicker">Precision Aquatic Management</p>
+        <h2 class="section-title">Healthy Waters, Managed Right</h2>
+        <p class="section-subtitle">
+          Targeted treatments, shoreline protection, and data‑driven pond insights.
+        </p>
+      </div>
+
+      <div class="split-layout">
+
+        <div class="split-main hover-glow">
+          <h3 class="split-title">The DroneTech Advantage</h3>
+
+          <ul class="service-list">
+            <li><span class="service-dot"></span>
+              <strong>Targeted Weed Management:</strong> Aquatic‑approved treatments to manage invasive growth while protecting surrounding habitats.
+            </li>
+            <li><span class="service-dot"></span>
+              <strong>Infrastructure Audits:</strong> Thermal imaging to identify irrigation leaks, dam seepage, or temperature gradients.
+            </li>
+            <li><span class="service-dot"></span>
+              <strong>Shoreline Preservation:</strong> Aerial application eliminates rutting and damage from heavy ground rigs.
+            </li>
+          </ul>
+
+          <div class="callout-box">
+            <h4>Take the Next Step</h4>
+            <p>
+              Schedule your free pond assessment today—let us walk your pond and demonstrate how our
+              data‑driven approach can lower your input costs.
+            </p>
+            <p class="callout-note">
+              <strong>Farm Bureau Member Appreciation:</strong> 10% discount on all spraying services.
+            </p>
+          </div>
+        </div>
+
+        <aside class="split-side hover-glow">
+          <h4 class="split-side-title">Talk with the Team</h4>
+          <p class="split-side-text">Ready to elevate your operation?</p>
+
+          <p class="split-side-contact">
+            <strong>Contact:</strong><br>
+            Ronnie Denton — (903) 477‑1798<br>
+            Jake Messer — (936) 238‑9633
+          </p>
+
+          <p class="split-side-text">
+            <strong>Service Area:</strong> Southeast Texas
+          </p>
+
+          <button class="btn btn-primary" id="openModalAquatic">Book a Pond Assessment</button>
+        </aside>
+
+      </div>
+
+      <!-- AQUATIC IMAGE STRIP -->
+      <div class="image-strip">
+        <div class="image-square hover-glow">
+          <img src="images/aquatic-1.jpg" alt="Pond aerial view">
+        </div>
+        <div class="image-square hover-glow">
+          <img src="images/aquatic-2.jpg" alt="Aquatic vegetation">
+        </div>
+        <div class="image-square hover-glow">
+          <img src="images/aquatic-3.jpg" alt="Drone over water">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SOLAR (FLIP CARDS) -->
+  <section class="section" id="solar">
+    <div class="container">
+
+      <div class="section-header">
+        <p class="section-kicker">Residential Solar Services • 2026 Pricing</p>
+        <h2 class="section-title">Maximize Your Solar ROI</h2>
+        <p class="section-subtitle">
+          Dirty panels and undetected cell failures quietly drain your production. DroneTech Solutions
+          combines aerial radiometry and pure‑water cleaning to restore performance.
+        </p>
+      </div>
+
+      <div class="solar-intro hover-glow">
+        <p>
+          DroneTech Solutions & SolarGuard Solutions<br>
+          1581 Cooks Road, Silsbee, Texas 77656<br>
+          Phone: (903) 477‑1798 | (936) 238‑9633<br>
+          FAA Certified UAS Pilots
+        </p>
+        <p class="solar-highlight">
+          We utilize professional aerial radiometry (thermal imaging) and pure water cleaning systems to
+          identify efficiency bottlenecks, find structural defects, and safely restore your panels to peak
+          production capacity.
+        </p>
+      </div>
+
+      <div class="card-grid-4">
+
+        <!-- TIER 1 -->
+        <div class="flip-card">
+          <div class="flip-inner">
+
+            <!-- FRONT -->
+            <div class="flip-front pricing-card hover-glow">
+              <h3 class="pricing-title">Tier 1: Small Array</h3>
+              <p class="pricing-sub">1 – 15 Panels</p>
+              <p class="pricing-summary">
+                Ideal for small residential systems. Includes a full aerial RGB inspection and a thermal scan
+                to identify early‑stage performance issues before they become costly.
+              </p>
+              <button class="flip-btn">View Details</button>
+            </div>
+
+            <!-- BACK -->
+            <div class="flip-back pricing-card hover-glow">
+              <h4 class="pricing-title">Tier 1 Pricing</h4>
+              <p class="pricing-price">$199.00</p>
+              <p class="pricing-note">+ $150 mobilization</p>
+
+              <p class="pricing-body">
+                Includes complete aerial RGB visual inspection, high‑resolution thermal imaging overlay,
+                and standard soft‑wash pure water cleaning. Digital report included.
+              </p>
+
+              <button class="flip-btn flip-close">Close</button>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- TIER 2 -->
+        <div class="flip-card">
+          <div class="flip-inner">
+
+            <!-- FRONT -->
+            <div class="flip-front pricing-card hover-glow">
+              <h3 class="pricing-title">Tier 2: Standard Residential</h3>
+              <p class="pricing-sub">16 – 30 Panels • Most Popular</p>
+              <p class="pricing-summary">
+                Designed for typical residential systems. Provides a detailed thermal analysis to detect
+                malfunctioning cells, plus a complete pure‑water cleaning to restore peak efficiency.
+              </p>
+              <button class="flip-btn">View Details</button>
+            </div>
+
+            <!-- BACK -->
+            <div class="flip-back pricing-card hover-glow">
+              <h4 class="pricing-title">Tier 2 Pricing</h4>
+              <p class="pricing-price">$329.00</p>
+
+              <p class="pricing-body">
+                Includes radiometric UAS scan, multi‑angle aerial mapping, and comprehensive pure‑water
+                cleaning to remove dirt, pollen, and debris. Includes comparative data summary.
+              </p>
+
+              <button class="flip-btn flip-close">Close</button>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- TIER 3 -->
+        <div class="flip-card">
+          <div class="flip-inner">
+
+            <!-- FRONT -->
+            <div class="flip-front pricing-card hover-glow">
+              <h3 class="pricing-title">Tier 3: Large / Estate Array</h3>
+              <p class="pricing-sub">31 – 50 Panels</p>
+              <p class="pricing-summary">
+                Built for larger residential systems. Offers a multi‑pass thermal map, string‑level
+                malfunction analysis, and a premium digital health report.
+              </p>
+              <button class="flip-btn">View Details</button>
+            </div>
+
+            <!-- BACK -->
+            <div class="flip-back pricing-card hover-glow">
+              <h4 class="pricing-title">Tier 3 Pricing</h4>
+              <p class="pricing-price">$425.00</p>
+
+              <p class="pricing-body">
+                Includes multi‑pass thermal mapping, string‑level malfunction analysis, and exhaustive
+                pure‑water cleaning. Includes premium digital dashboard health report.
+              </p>
+
+              <button class="flip-btn flip-close">Close</button>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- CUSTOM -->
+        <div class="flip-card">
+          <div class="flip-inner">
+
+            <!-- FRONT -->
+            <div class="flip-front pricing-card hover-glow">
+              <h3 class="pricing-title">Custom / Large Estate</h3>
+              <p class="pricing-sub">51+ Panels</p>
+              <p class="pricing-summary">
+                For oversized arrays or multi‑roof systems. Tailored inspection workflows and scalable
+                pricing ensure accurate diagnostics for complex installations.
+              </p>
+              <button class="flip-btn">View Details</button>
+            </div>
+
+            <!-- BACK -->
+            <div class="flip-back pricing-card hover-glow">
+              <h4 class="pricing-title">Custom Tier Pricing</h4>
+              <p class="pricing-price">Contact for Quote</p>
+              <p class="pricing-note">$7.50 per additional panel beyond 50</p>
+
+              <p class="pricing-body">
+                Includes custom inspection workflows, scaled pricing, and detailed reporting for large or
+                complex solar installations.
+              </p>
+
+              <button class="flip-btn flip-close">Close</button>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- SOLAR IMAGE STRIP -->
+      <div class="image-strip">
+        <div class="image-square hover-glow">
+          <img src="images/solar-1.jpg" alt="Solar array">
+        </div>
+        <div class="image-square hover-glow">
+          <img src="images/solar-2.jpg" alt="Thermal solar inspection">
+        </div>
+        <div class="image-square hover-glow">
+          <img src="images/solar-3.jpg" alt="Drone over solar field">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WILDLIFE (FLIP CARDS) -->
+  <section class="section section-alt" id="wildlife">
+    <div class="container">
+
+      <div class="section-header">
+        <p class="section-kicker">Wildlife Management</p>
+        <h2 class="section-title">Thermal Reconnaissance & Herd Management</h2>
+        <p class="section-subtitle">
+          Utilizing the DJI Matrice 300 RTK with high‑performance thermal imaging for precise wildlife
+          reconnaissance and herd management.
+        </p>
+      </div>
+
+      <div class="card-grid-4">
+
+        <!-- MOBILIZATION -->
+        <div class="flip-card">
+          <div class="flip-inner">
+
+            <!-- FRONT -->
+            <div class="flip-front pricing-card hover-glow">
+              <h3 class="pricing-title">Mobilization Fee</h3>
+              <p class="pricing-summary">
+                Covers travel, equipment transport, flight planning, and on‑site setup to ensure safe and
+                efficient wildlife operations.
+              </p>
+              <button class="flip-btn">View Details</button>
+            </div>
+
+            <!-- BACK -->
+            <div class="flip-back pricing-card hover-glow">
+              <h4 class="pricing-title">Mobilization Pricing</h4>
+              <p class="pricing-price">$500</p>
+
+              <p class="pricing-body">
+                Includes site assessment, flight planning, equipment transport, and setup for wildlife
+                operations.
+              </p>
+
+              <button class="flip-btn flip-close">Close</button>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- HALF DAY -->
+        <div class="flip-card">
+          <div class="flip-inner">
+
+            <!-- FRONT -->
+            <div class="flip-front pricing-card hover-glow">
+              <h3 class="pricing-title">Half‑Day Operation</h3>
+              <p class="pricing-summary">
+                Up to four hours of on‑site flight time for targeted wildlife surveys, herd tracking, or
+                property‑wide reconnaissance.
+              </p>
+              <button class="flip-btn">View Details</button>
+            </div>
+
+            <!-- BACK -->
+            <div class="flip-back pricing-card hover-glow">
+              <h4 class="pricing-title">Half‑Day Pricing</h4>
+              <p class="pricing-price">$1,000</p>
+
+              <p class="pricing-body">
+                Includes up to 4 hours of flight time for surveys or targeted scouting across your property.
+              </p>
+
+              <button class="flip-btn flip-close">Close</button>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- FULL DAY -->
+        <div class="flip-card">
+          <div class="flip-inner">
+
+            <!-- FRONT -->
+            <div class="flip-front pricing-card hover-glow">
+              <h3 class="pricing-title">Full‑Day Operation</h3>
+              <p class="pricing-summary">
+                Extended flight operations for large properties, multi‑zone surveys, or complex herd
+                management objectives.
+              </p>
+              <button class="flip-btn">View Details</button>
+            </div>
+
+            <!-- BACK -->
+            <div class="flip-back pricing-card hover-glow">
+              <h4 class="pricing-title">Full‑Day Pricing</h4>
+              <p class="pricing-price">$1,800</p>
+
+              <p class="pricing-body">
+                Includes up to 8 hours of flight time, multi‑zone coverage, and detailed thermal
+                reconnaissance reporting.
+              </p>
+
+              <button class="flip-btn flip-close">Close</button>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- CUSTOM WILDLIFE -->
+        <div class="flip-card">
+          <div class="flip-inner">
+
+            <!-- FRONT -->
+            <div class="flip-front pricing-card hover-glow">
+              <h3 class="pricing-title">Custom Wildlife Package</h3>
+              <p class="pricing-summary">
+                Tailored operations for unique properties, specialized herd objectives, or multi‑day
+                reconnaissance campaigns.
+              </p>
+              <button class="flip-btn">View Details</button>
+            </div>
+
+            <!-- BACK -->
+            <div class="flip-back pricing-card hover-glow">
+              <h4 class="pricing-title">Custom Package Pricing</h4>
+              <p class="pricing-price">Contact for Quote</p>
+
+              <p class="pricing-body">
+                Designed around your property, herd goals, and operational constraints. Includes planning,
+                execution, and reporting.
+              </p>
+
+              <button class="flip-btn flip-close">Close</button>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- WILDLIFE IMAGE STRIP -->
+      <div class="image-strip">
+        <div class="image-square hover-glow">
+          <img src="images/wildlife-1.jpg" alt="Thermal wildlife scan">
+        </div>
+        <div class="image-square hover-glow">
+          <img src="images/wildlife-2.jpg" alt="Drone over ranch">
+        </div>
+        <div class="image-square hover-glow">
+          <img src="images/wildlife-3.jpg" alt="Herd management aerial view">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+ <section class="section" id="about">
+  <div class="container">
+
+    <div class="section-header">
+      <p class="section-kicker">About Us</p>
+      <h2 class="section-title">Meet the Team</h2>
+      <p class="section-subtitle">
+        Two operators. One mission: safe, professional, data‑driven drone operations across Southeast Texas.
+      </p>
+    </div>
+
+    <div class="about-grid">
+
+      <!-- RONNIE -->
+      <article class="about-card hover-glow">
+        <div class="about-headshot-wrapper">
+          <div class="about-headshot-placeholder"></div>
+        </div>
+        <h3 class="about-name">Ronnie Denton</h3>
+        <p class="about-role">FAA Certified UAS Pilot</p>
+        <p class="about-text">
+          Ronnie specializes in agricultural spraying, aquatic vegetation management, and solar diagnostics.
+          With years of field experience, he brings precision, safety, and consistency to every operation.
+        </p>
+        <p class="about-text">
+          Phone: (903) 477‑1798
+        </p>
+      </article>
+
+      <!-- JAKE -->
+      <article class="about-card hover-glow">
+        <div class="about-headshot-wrapper">
+          <div class="about-headshot-placeholder"></div>
+        </div>
+        <h3 class="about-name">Jake Messer</h3>
+        <p class="about-role">FAA Certified UAS Pilot</p>
+        <p class="about-text">
+          Jake leads thermal imaging, wildlife reconnaissance, and infrastructure inspections. His technical
+          background ensures accurate data capture and actionable reporting.
+        </p>
+        <p class="about-text">
+          Phone: (936) 238‑9633
+        </p>
+      </article>
+
+    </div>
+
+    <!-- ABOUT IMAGE STRIP -->
+    <div class="image-strip">
+      <div class="image-square hover-glow">
+        <img src="images/about-1.jpg" alt="Drone operator">
+      </div>
+      <div class="image-square hover-glow">
+        <img src="images/about-2.jpg" alt="Drone equipment">
+      </div>
+      <div class="image-square hover-glow">
+        <img src="images/about-3.jpg" alt="Flight planning">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <p class="footer-brand">DroneTech Solutions</p>
+        <p class="footer-text">
+          Serving Southeast Texas with professional, data‑driven drone operations for land, water, solar, and wildlife.
+        </p>
+      </div>
+      <div class="footer-right">
+        <p class="footer-text">
+          1581 Cooks Road, Silsbee, Texas 77656<br>
+          Phone: (903) 477‑1798 | (936) 238‑9633
+        </p>
+        <p class="footer-meta">
+          © <span id="year"></span> DroneTech Solutions. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL -->
+  <div class="modal-backdrop" id="modalBackdrop">
+    <div class="modal">
+      <button class="modal-close" id="modalClose">×</button>
+      <h2 class="modal-title">Request a Quote</h2>
+      <p class="modal-subtitle">
+        Share a few details about your project and we’ll follow up with a tailored proposal.
+      </p>
+
+      <form class="modal-form" id="contactForm">
+        <div class="modal-field">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" required />
+        </div>
+
+        <div class="modal-field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required />
+        </div>
+
+        <div class="modal-field">
+          <label for="phone">Phone</label>
+          <input id="phone" name="phone" type="tel" />
+        </div>
+
+        <div class="modal-field">
+          <label for="service">Service Type</label>
+          <select id="service" name="service">
+            <option value="spraying">Precision Spraying</option>
+            <option value="mapping">Aerial Mapping</option>
+            <option value="inspection">Industrial Inspection</option>
+            <option value="aquatic">Aquatic Management</option>
+            <option value="solar">Solar Diagnostics</option>
+            <option value="wildlife">Wildlife Operations</option>
+          </select>
+        </div>
+
+        <div class="modal-field">
+          <label for="details">Project Details</label>
+          <textarea id="details" name="details" rows="4"></textarea>
+        </div>
+
+        <button class="btn btn-primary btn-full" type="submit">Submit Request</button>
+      </form>
     </div>
   </div>
-</div>
 
-<!-- LIGHTBOX -->
-<div id="lightbox" class="lightbox">
-  <span class="lightbox-close">&times;</span>
-  <img class="lightbox-img" src="" alt="">
-</div>
-
-<!-- FLOATING BUTTONS -->
-<a href="tel:9034771798" class="float-call">📞 Call Now</a>
-<button class="float-quote" id="floatQuote">Request Quote</button>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
+
 
 

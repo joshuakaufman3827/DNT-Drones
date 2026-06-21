@@ -1,122 +1,113 @@
-// Modal logic
-const modal = document.getElementById("contactModal");
-const openBtn = document.getElementById("openModal");
-const openBtn2 = document.getElementById("openModal2");
-const openQuote = document.getElementById("openQuote");
-const closeBtn = document.getElementById("closeModal");
+// =========================
+// YEAR IN FOOTER
+// =========================
+const yearEl = document.getElementById("year");
+if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-if (openBtn) openBtn.onclick = () => modal.style.display = "flex";
-if (openBtn2) openBtn2.onclick = () => modal.style.display = "flex";
-if (openQuote) openQuote.onclick = () => modal.style.display = "flex";
-if (closeBtn) closeBtn.onclick = () => modal.style.display = "none";
 
-window.addEventListener("click", (e) => {
-  if (e.target === modal) modal.style.display = "none";
-});
+// =========================
+// SMOOTH SCROLL
+// =========================
+function scrollToSection(id) {
+  const el = document.getElementById(id);
+  if (!el) return;
 
-// Multi-step form
-const steps = document.querySelectorAll(".form-step");
-const dots = document.querySelectorAll(".step-dot");
-const nextBtn = document.querySelector(".next-step");
-const prevBtn = document.querySelector(".prev-step");
-
-let currentStep = 1;
-
-function showStep(step) {
-  steps.forEach(s => s.classList.remove("active"));
-  dots.forEach(d => d.classList.remove("active"));
-
-  const activeStep = document.querySelector(`.form-step[data-step="${step}"]`);
-  const activeDot = document.querySelector(`.step-dot[data-step="${step}"]`);
-
-  if (activeStep) activeStep.classList.add("active");
-  if (activeDot) activeDot.classList.add("active");
+  const y = el.getBoundingClientRect().top + window.scrollY - 80;
+  window.scrollTo({ top: y, behavior: "smooth" });
 }
 
-if (nextBtn) {
-  nextBtn.addEventListener("click", () => {
-    currentStep = 2;
-    showStep(currentStep);
-  });
-}
 
-if (prevBtn) {
-  prevBtn.addEventListener("click", () => {
-    currentStep = 1;
-    showStep(currentStep);
-  });
-}
-
-showStep(currentStep);
-
-// Form submit
-const contactForm = document.getElementById("contactForm");
-if (contactForm) {
-  contactForm.addEventListener("submit", function (e) {
-    e.preventDefault();
-    alert("Your message has been sent. Thank you!");
-    modal.style.display = "none";
-    contactForm.reset();
-    currentStep = 1;
-    showStep(currentStep);
-  });
-}
-
-// Dark mode toggle
+// =========================
+// THEME TOGGLE
+// =========================
 const themeToggle = document.getElementById("themeToggle");
+
 if (themeToggle) {
   themeToggle.addEventListener("click", () => {
-    document.body.classList.toggle("dark");
-    const isDark = document.body.classList.contains("dark");
-    themeToggle.textContent = isDark ? "☀️" : "🌙";
+    const isLight = document.body.classList.contains("light");
+
+    document.body.classList.toggle("light", !isLight);
+    document.body.classList.toggle("dark", isLight);
+
+    themeToggle.textContent = isLight ? "☾" : "☀";
   });
 }
 
-// Gallery lightbox
-const galleryItems = document.querySelectorAll(".gallery-item");
-const lightbox = document.getElementById("lightbox");
-const lightboxImg = document.querySelector(".lightbox-img");
-const lightboxClose = document.querySelector(".lightbox-close");
 
-galleryItems.forEach(img => {
-  img.addEventListener("click", () => {
-    lightboxImg.src = img.src;
-    lightbox.style.display = "flex";
-  });
+// =========================
+// MODAL LOGIC
+// =========================
+const modalBackdrop = document.getElementById("modalBackdrop");
+const modalClose = document.getElementById("modalClose");
+const contactForm = document.getElementById("contactForm");
+
+function openModal() {
+  if (modalBackdrop) modalBackdrop.style.display = "flex";
+}
+
+function closeModal() {
+  if (modalBackdrop) modalBackdrop.style.display = "none";
+}
+
+// Buttons that open the modal
+[
+  "openModalNav",
+  "openModalHero",
+  "openModalSpray",
+  "openModalMap",
+  "openModalInfra",
+  "openModalAquatic",
+  "openModalWildlife"
+].forEach(id => {
+  const btn = document.getElementById(id);
+  if (btn) btn.addEventListener("click", openModal);
 });
 
-if (lightboxClose) {
-  lightboxClose.addEventListener("click", () => {
-    lightbox.style.display = "none";
+// Close button
+if (modalClose) modalClose.addEventListener("click", closeModal);
+
+// Click outside modal closes it
+if (modalBackdrop) {
+  modalBackdrop.addEventListener("click", (e) => {
+    if (e.target === modalBackdrop) closeModal();
   });
 }
 
-window.addEventListener("click", (e) => {
-  if (e.target === lightbox) {
-    lightbox.style.display = "none";
+// Form submission (preview only)
+if (contactForm) {
+  contactForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    alert("Preview only: this would send directly to DroneTech’s email in production.");
+    contactForm.reset();
+    closeModal();
+  });
+}
+
+
+// =========================
+// FLIP CARD LOGIC (SOLAR + WILDLIFE ONLY)
+// =========================
+document.querySelectorAll(".flip-card").forEach(card => {
+  const viewBtn = card.querySelector(".flip-btn:not(.flip-close)");
+  const closeBtn = card.querySelector(".flip-close");
+
+  // FRONT → BACK
+  if (viewBtn) {
+    viewBtn.addEventListener("click", e => {
+      e.preventDefault();
+      e.stopPropagation();
+      card.classList.add("flipped");
+    });
+  }
+
+  // BACK → FRONT
+  if (closeBtn) {
+    closeBtn.addEventListener("click", e => {
+      e.preventDefault();
+      e.stopPropagation();
+      card.classList.remove("flipped");
+    });
   }
 });
 
-// Mobile nav toggle
-const hamburgerBtn = document.getElementById("hamburgerBtn");
-const mobileNav = document.getElementById("mobileNav");
-const openModalMobile = document.getElementById("openModalMobile");
 
-if (hamburgerBtn) {
-  hamburgerBtn.addEventListener("click", () => {
-    mobileNav.style.display = mobileNav.style.display === "flex" ? "none" : "flex";
-  });
-}
-
-if (openModalMobile) {
-  openModalMobile.onclick = () => {
-    modal.style.display = "flex";
-    mobileNav.style.display = "none";
-  };
-}
-
-// Floating quote button
-const floatQuote = document.getElementById("floatQuote");
-if (floatQuote) {
-  floatQuote.onclick = () => modal.style.display = "flex";
-}
