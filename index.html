@@ -12,7 +12,14 @@
   <!-- HEADER -->
   <header class="header">
     <div class="container header-inner">
-      <div class="logo-text">DroneTech Solutions</div>
+
+      <!-- LOGO PLACEHOLDER -->
+      <div class="logo-wrapper">
+        <img class="logo-img" src="images/Dronetechlogo.jpeg" alt="Company Logo">
+
+        <span class="logo-text">DroneTech Solutions</span>
+      </div>
+
       <nav class="nav-links">
         <button class="nav-link" onclick="scrollToSection('services')">Services</button>
         <button class="nav-link" onclick="scrollToSection('aquatic')">Aquatic</button>
@@ -24,6 +31,14 @@
       </nav>
     </div>
   </header>
+
+  <!-- Floating Drone -->
+<div class="hero-drone"></div>
+
+<!-- Animated Flight Path -->
+<svg class="drone-path" viewBox="0 0 500 200">
+  <path d="M10 150 C150 20, 350 20, 490 150" />
+</svg>
 
   <!-- HERO -->
   <section class="hero">
@@ -117,13 +132,13 @@
       <!-- SERVICES IMAGE STRIP -->
       <div class="image-strip">
         <div class="image-square hover-glow">
-          <img src="images/services-1.jpg" alt="Drone spraying field">
+          <img src="images/gallery1.jpeg" alt="Drone spraying field">
         </div>
         <div class="image-square hover-glow">
-          <img src="images/services-2.jpg" alt="Aerial mapping">
+          <img src="images/IMG_4223.jpeg" alt="Thermal Imaging">
         </div>
         <div class="image-square hover-glow">
-          <img src="images/services-3.jpg" alt="Industrial inspection">
+          <img src="images/IMG_3699.jpeg" alt="Industrial inspection">
         </div>
       </div>
 
@@ -206,7 +221,7 @@
     </div>
   </section>
 
-  <!-- SOLAR (FLIP CARDS) -->
+  <!-- SOLAR (STATIC CARDS) -->
   <section class="section" id="solar">
     <div class="container">
 
@@ -235,151 +250,69 @@
 
       <div class="card-grid-4">
 
-        <!-- TIER 1 -->
-        <div class="flip-card">
-          <div class="flip-inner">
+        <!-- STATIC CARD 1 -->
+        <article class="pricing-card hover-glow">
+          <h3 class="pricing-title">Tier 1: Small Array</h3>
+          <p class="pricing-sub">1 – 15 Panels</p>
+          <p class="pricing-summary">
+            Ideal for small residential systems. Includes a full aerial RGB inspection and a thermal scan
+            to identify early‑stage performance issues before they become costly.
+          </p>
+          <p class="pricing-price">Pricing: <strong>Fill in</strong></p>
+        </article>
 
-            <!-- FRONT -->
-            <div class="flip-front pricing-card hover-glow">
-              <h3 class="pricing-title">Tier 1: Small Array</h3>
-              <p class="pricing-sub">1 – 15 Panels</p>
-              <p class="pricing-summary">
-                Ideal for small residential systems. Includes a full aerial RGB inspection and a thermal scan
-                to identify early‑stage performance issues before they become costly.
-              </p>
-              <button class="flip-btn">View Details</button>
-            </div>
+        <!-- STATIC CARD 2 -->
+        <article class="pricing-card hover-glow">
+          <h3 class="pricing-title">Tier 2: Standard Residential</h3>
+          <p class="pricing-sub">16 – 30 Panels • Most Popular</p>
+          <p class="pricing-summary">
+            Designed for typical residential systems. Provides a detailed thermal analysis to detect
+            malfunctioning cells, plus a complete pure‑water cleaning to restore peak efficiency.
+          </p>
+          <p class="pricing-price">Pricing: <strong>Fill in</strong></p>
+        </article>
 
-            <!-- BACK -->
-            <div class="flip-back pricing-card hover-glow">
-              <h4 class="pricing-title">Tier 1 Pricing</h4>
-              <p class="pricing-price">$199.00</p>
-              <p class="pricing-note">+ $150 mobilization</p>
+        <!-- STATIC CARD 3 -->
+        <article class="pricing-card hover-glow">
+          <h3 class="pricing-title">Tier 3: Large / Estate Array</h3>
+          <p class="pricing-sub">31 – 50 Panels</p>
+          <p class="pricing-summary">
+            Built for larger residential systems. Offers a multi‑pass thermal map, string‑level
+            malfunction analysis, and a premium digital health report.
+          </p>
+          <p class="pricing-price">Pricing: <strong>Fill in</strong></p>
+        </article>
 
-              <p class="pricing-body">
-                Includes complete aerial RGB visual inspection, high‑resolution thermal imaging overlay,
-                and standard soft‑wash pure water cleaning. Digital report included.
-              </p>
-
-              <button class="flip-btn flip-close">Close</button>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- TIER 2 -->
-        <div class="flip-card">
-          <div class="flip-inner">
-
-            <!-- FRONT -->
-            <div class="flip-front pricing-card hover-glow">
-              <h3 class="pricing-title">Tier 2: Standard Residential</h3>
-              <p class="pricing-sub">16 – 30 Panels • Most Popular</p>
-              <p class="pricing-summary">
-                Designed for typical residential systems. Provides a detailed thermal analysis to detect
-                malfunctioning cells, plus a complete pure‑water cleaning to restore peak efficiency.
-              </p>
-              <button class="flip-btn">View Details</button>
-            </div>
-
-            <!-- BACK -->
-            <div class="flip-back pricing-card hover-glow">
-              <h4 class="pricing-title">Tier 2 Pricing</h4>
-              <p class="pricing-price">$329.00</p>
-
-              <p class="pricing-body">
-                Includes radiometric UAS scan, multi‑angle aerial mapping, and comprehensive pure‑water
-                cleaning to remove dirt, pollen, and debris. Includes comparative data summary.
-              </p>
-
-              <button class="flip-btn flip-close">Close</button>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- TIER 3 -->
-        <div class="flip-card">
-          <div class="flip-inner">
-
-            <!-- FRONT -->
-            <div class="flip-front pricing-card hover-glow">
-              <h3 class="pricing-title">Tier 3: Large / Estate Array</h3>
-              <p class="pricing-sub">31 – 50 Panels</p>
-              <p class="pricing-summary">
-                Built for larger residential systems. Offers a multi‑pass thermal map, string‑level
-                malfunction analysis, and a premium digital health report.
-              </p>
-              <button class="flip-btn">View Details</button>
-            </div>
-
-            <!-- BACK -->
-            <div class="flip-back pricing-card hover-glow">
-              <h4 class="pricing-title">Tier 3 Pricing</h4>
-              <p class="pricing-price">$425.00</p>
-
-              <p class="pricing-body">
-                Includes multi‑pass thermal mapping, string‑level malfunction analysis, and exhaustive
-                pure‑water cleaning. Includes premium digital dashboard health report.
-              </p>
-
-              <button class="flip-btn flip-close">Close</button>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- CUSTOM -->
-        <div class="flip-card">
-          <div class="flip-inner">
-
-            <!-- FRONT -->
-            <div class="flip-front pricing-card hover-glow">
-              <h3 class="pricing-title">Custom / Large Estate</h3>
-              <p class="pricing-sub">51+ Panels</p>
-              <p class="pricing-summary">
-                For oversized arrays or multi‑roof systems. Tailored inspection workflows and scalable
-                pricing ensure accurate diagnostics for complex installations.
-              </p>
-              <button class="flip-btn">View Details</button>
-            </div>
-
-            <!-- BACK -->
-            <div class="flip-back pricing-card hover-glow">
-              <h4 class="pricing-title">Custom Tier Pricing</h4>
-              <p class="pricing-price">Contact for Quote</p>
-              <p class="pricing-note">$7.50 per additional panel beyond 50</p>
-
-              <p class="pricing-body">
-                Includes custom inspection workflows, scaled pricing, and detailed reporting for large or
-                complex solar installations.
-              </p>
-
-              <button class="flip-btn flip-close">Close</button>
-            </div>
-
-          </div>
-        </div>
+        <!-- STATIC CARD 4 -->
+        <article class="pricing-card hover-glow">
+          <h3 class="pricing-title">Custom / Large Estate</h3>
+          <p class="pricing-sub">51+ Panels</p>
+          <p class="pricing-summary">
+            For oversized arrays or multi‑roof systems. Tailored inspection workflows and scalable
+            pricing ensure accurate diagnostics for complex installations.
+          </p>
+          <p class="pricing-price">Pricing: <strong>Fill in</strong></p>
+        </article>
 
       </div>
 
       <!-- SOLAR IMAGE STRIP -->
       <div class="image-strip">
         <div class="image-square hover-glow">
-          <img src="images/solar-1.jpg" alt="Solar array">
+          <img src="images/gallery2.jpeg" alt="Solar array">
         </div>
         <div class="image-square hover-glow">
-          <img src="images/solar-2.jpg" alt="Thermal solar inspection">
+          <img src="images/gallery7.png" alt="Thermal solar inspection">
         </div>
         <div class="image-square hover-glow">
-          <img src="images/solar-3.jpg" alt="Drone over solar field">
+          <img src="images/D20EF062-1FBD-4EB9-9CE9-8FB3E8498011.jpeg" alt="Drone over solar field">
         </div>
       </div>
 
     </div>
   </section>
 
-  <!-- WILDLIFE (FLIP CARDS) -->
+  <!-- WILDLIFE (STATIC CARDS) -->
   <section class="section section-alt" id="wildlife">
     <div class="container">
 
@@ -394,137 +327,54 @@
 
       <div class="card-grid-4">
 
-        <!-- MOBILIZATION -->
-        <div class="flip-card">
-          <div class="flip-inner">
+        <article class="pricing-card hover-glow">
+          <h3 class="pricing-title">Mobilization Fee</h3>
+          <p class="pricing-summary">
+            Covers travel, equipment transport, flight planning, and on‑site setup to ensure safe and
+            efficient wildlife operations.
+          </p>
+          <p class="pricing-price">Pricing: <strong>Fill in</strong></p>
+        </article>
 
-            <!-- FRONT -->
-            <div class="flip-front pricing-card hover-glow">
-              <h3 class="pricing-title">Mobilization Fee</h3>
-              <p class="pricing-summary">
-                Covers travel, equipment transport, flight planning, and on‑site setup to ensure safe and
-                efficient wildlife operations.
-              </p>
-              <button class="flip-btn">View Details</button>
-            </div>
+        <article class="pricing-card hover-glow">
+          <h3 class="pricing-title">Half‑Day Operation</h3>
+          <p class="pricing-summary">
+            Up to four hours of on‑site flight time for targeted wildlife surveys, herd tracking, or
+            property‑wide reconnaissance.
+          </p>
+          <p class="pricing-price">Pricing: <strong>Fill in</strong></p>
+        </article>
 
-            <!-- BACK -->
-            <div class="flip-back pricing-card hover-glow">
-              <h4 class="pricing-title">Mobilization Pricing</h4>
-              <p class="pricing-price">$500</p>
+        <article class="pricing-card hover-glow">
+          <h3 class="pricing-title">Full‑Day Operation</h3>
+          <p class="pricing-summary">
+            Extended flight operations for large properties, multi‑zone surveys, or complex herd
+            management objectives.
+          </p>
+          <p class="pricing-price">Pricing: <strong>Fill in</strong></p>
+        </article>
 
-              <p class="pricing-body">
-                Includes site assessment, flight planning, equipment transport, and setup for wildlife
-                operations.
-              </p>
-
-              <button class="flip-btn flip-close">Close</button>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- HALF DAY -->
-        <div class="flip-card">
-          <div class="flip-inner">
-
-            <!-- FRONT -->
-            <div class="flip-front pricing-card hover-glow">
-              <h3 class="pricing-title">Half‑Day Operation</h3>
-              <p class="pricing-summary">
-                Up to four hours of on‑site flight time for targeted wildlife surveys, herd tracking, or
-                property‑wide reconnaissance.
-              </p>
-              <button class="flip-btn">View Details</button>
-            </div>
-
-            <!-- BACK -->
-            <div class="flip-back pricing-card hover-glow">
-              <h4 class="pricing-title">Half‑Day Pricing</h4>
-              <p class="pricing-price">$1,000</p>
-
-              <p class="pricing-body">
-                Includes up to 4 hours of flight time for surveys or targeted scouting across your property.
-              </p>
-
-              <button class="flip-btn flip-close">Close</button>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- FULL DAY -->
-        <div class="flip-card">
-          <div class="flip-inner">
-
-            <!-- FRONT -->
-            <div class="flip-front pricing-card hover-glow">
-              <h3 class="pricing-title">Full‑Day Operation</h3>
-              <p class="pricing-summary">
-                Extended flight operations for large properties, multi‑zone surveys, or complex herd
-                management objectives.
-              </p>
-              <button class="flip-btn">View Details</button>
-            </div>
-
-            <!-- BACK -->
-            <div class="flip-back pricing-card hover-glow">
-              <h4 class="pricing-title">Full‑Day Pricing</h4>
-              <p class="pricing-price">$1,800</p>
-
-              <p class="pricing-body">
-                Includes up to 8 hours of flight time, multi‑zone coverage, and detailed thermal
-                reconnaissance reporting.
-              </p>
-
-              <button class="flip-btn flip-close">Close</button>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- CUSTOM WILDLIFE -->
-        <div class="flip-card">
-          <div class="flip-inner">
-
-            <!-- FRONT -->
-            <div class="flip-front pricing-card hover-glow">
-              <h3 class="pricing-title">Custom Wildlife Package</h3>
-              <p class="pricing-summary">
-                Tailored operations for unique properties, specialized herd objectives, or multi‑day
-                reconnaissance campaigns.
-              </p>
-              <button class="flip-btn">View Details</button>
-            </div>
-
-            <!-- BACK -->
-            <div class="flip-back pricing-card hover-glow">
-              <h4 class="pricing-title">Custom Package Pricing</h4>
-              <p class="pricing-price">Contact for Quote</p>
-
-              <p class="pricing-body">
-                Designed around your property, herd goals, and operational constraints. Includes planning,
-                execution, and reporting.
-              </p>
-
-              <button class="flip-btn flip-close">Close</button>
-            </div>
-
-          </div>
-        </div>
+        <article class="pricing-card hover-glow">
+          <h3 class="pricing-title">Custom Wildlife Package</h3>
+          <p class="pricing-summary">
+            Tailored operations for unique properties, specialized herd objectives, or multi‑day
+            reconnaissance campaigns.
+          </p>
+          <p class="pricing-price">Pricing: <strong>Fill in</strong></p>
+        </article>
 
       </div>
 
       <!-- WILDLIFE IMAGE STRIP -->
       <div class="image-strip">
         <div class="image-square hover-glow">
-          <img src="images/wildlife-1.jpg" alt="Thermal wildlife scan">
+          <img src="images/IMG_3685.png" alt="Thermal wildlife scan">
         </div>
         <div class="image-square hover-glow">
-          <img src="images/wildlife-2.jpg" alt="Drone over ranch">
+          <img src="images/IMG_3688.png" alt="Drone over ranch">
         </div>
         <div class="image-square hover-glow">
-          <img src="images/wildlife-3.jpg" alt="Herd management aerial view">
+          <img src="images/21E8D7AC-6FB1-4366-B821-D8590F6A2CC5.jpeg" alt="Herd management aerial view">
         </div>
       </div>
 
@@ -543,19 +393,23 @@
       </p>
     </div>
 
+    <!-- ABOUT GRID -->
     <div class="about-grid">
 
       <!-- RONNIE -->
       <article class="about-card hover-glow">
         <div class="about-headshot-wrapper">
-          <div class="about-headshot-placeholder"></div>
+          <img class="about-headshot-img" src="images/IMG_1343.jpeg" alt="Ronnie Denton Headshot">
         </div>
+
         <h3 class="about-name">Ronnie Denton</h3>
         <p class="about-role">FAA Certified UAS Pilot</p>
+
         <p class="about-text">
           Ronnie specializes in agricultural spraying, aquatic vegetation management, and solar diagnostics.
           With years of field experience, he brings precision, safety, and consistency to every operation.
         </p>
+
         <p class="about-text">
           Phone: (903) 477‑1798
         </p>
@@ -564,14 +418,17 @@
       <!-- JAKE -->
       <article class="about-card hover-glow">
         <div class="about-headshot-wrapper">
-          <div class="about-headshot-placeholder"></div>
+          <img class="about-headshot-img" src="images/IMG_2689.jpeg" alt="Jake Messer Headshot">
         </div>
+
         <h3 class="about-name">Jake Messer</h3>
         <p class="about-role">FAA Certified UAS Pilot</p>
+
         <p class="about-text">
           Jake leads thermal imaging, wildlife reconnaissance, and infrastructure inspections. His technical
           background ensures accurate data capture and actionable reporting.
         </p>
+
         <p class="about-text">
           Phone: (936) 238‑9633
         </p>
@@ -579,46 +436,63 @@
 
     </div>
 
-    <!-- ABOUT IMAGE STRIP -->
-    <div class="image-strip">
-      <div class="image-square hover-glow">
-        <img src="images/about-1.jpg" alt="Drone operator">
-      </div>
-      <div class="image-square hover-glow">
-        <img src="images/about-2.jpg" alt="Drone equipment">
-      </div>
-      <div class="image-square hover-glow">
-        <img src="images/about-3.jpg" alt="Flight planning">
-      </div>
-    </div>
-
   </div>
 </section>
 
 
-    </div>
-  </section>
-
   <!-- FOOTER -->
+    <!-- FOOTER -->
   <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-left">
-        <p class="footer-brand">DroneTech Solutions</p>
-        <p class="footer-text">
-          Serving Southeast Texas with professional, data‑driven drone operations for land, water, solar, and wildlife.
-        </p>
-      </div>
-      <div class="footer-right">
-        <p class="footer-text">
-          1581 Cooks Road, Silsbee, Texas 77656<br>
-          Phone: (903) 477‑1798 | (936) 238‑9633
-        </p>
-        <p class="footer-meta">
-          © <span id="year"></span> DroneTech Solutions. All rights reserved.
-        </p>
-      </div>
+  <div class="container footer-inner">
+
+    <!-- LEFT COLUMN -->
+    <div class="footer-col footer-branding">
+      <img class="footer-logo" src="images/Dronetechlogo.jpeg" alt="DroneTech Solutions Logo">
+
+      <p class="footer-brand">DroneTech Solutions</p>
+
+      <p class="footer-desc">
+        Serving Southeast Texas with professional, data‑driven drone operations for land, water, solar, and wildlife.
+      </p>
     </div>
-  </footer>
+
+    <!-- MIDDLE COLUMN -->
+    <div class="footer-col footer-contact">
+      <p class="footer-heading">Contact</p>
+
+      <p class="footer-text">
+        1581 Cooks Road<br>
+        Silsbee, Texas 77656
+      </p>
+
+      <p class="footer-text">
+        Phone: (903) 477‑1798<br>
+        Phone: (936) 238‑9633
+      </p>
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div class="footer-col footer-nav">
+      <p class="footer-heading">Navigation</p>
+
+      <a href="#services">Services</a>
+      <a href="#aquatic">Aquatic</a>
+      <a href="#solar">Solar</a>
+      <a href="#wildlife">Wildlife</a>
+      <a href="#about">About</a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © <span id="year"></span> DroneTech Solutions. All rights reserved.
+  </div>
+</footer>
+
+  <!-- FLOATING CONTACT BUTTON -->
+  <button class="floating-contact" id="floatingContactBtn">
+    Request a Quote
+  </button>
 
   <!-- MODAL -->
   <div class="modal-backdrop" id="modalBackdrop">
@@ -667,9 +541,12 @@
     </div>
   </div>
 
-  <script src="script.js"></script>
+ <!-- LOGO PLACEHOLDER -->
+      <div class="logo-wrapper">
+        <img class="logo-img" src="images/Dronetechlogo.jpeg" alt="Company Logo">
+
+        <span class="logo-text">DroneTech Solutions</span>
+      </div>
+
 </body>
 </html>
-
-
-
