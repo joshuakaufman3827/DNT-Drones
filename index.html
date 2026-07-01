@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <title>DroneTech Solutions</title>
@@ -7,16 +7,14 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 
-<body class="dark">
+<body class="system">
 
   <!-- HEADER -->
   <header class="header">
     <div class="container header-inner">
 
-      <!-- LOGO PLACEHOLDER -->
       <div class="logo-wrapper">
         <img class="logo-img" src="images/Dronetechlogo.jpeg" alt="Company Logo">
-
         <span class="logo-text">DroneTech Solutions</span>
       </div>
 
@@ -27,18 +25,28 @@
         <button class="nav-link" onclick="scrollToSection('wildlife')">Wildlife</button>
         <button class="nav-link" onclick="scrollToSection('about')">About</button>
         <button class="nav-link primary-nav" id="openModalNav">Request a Quote</button>
-        <button class="theme-toggle" id="themeToggle">☾</button>
+        <button class="theme-toggle" aria-label="Toggle theme">🌓</button>
       </nav>
+
     </div>
   </header>
 
-  <!-- Floating Drone -->
-<div class="hero-drone"></div>
+  <!-- DRONE PATHS -->
+  <svg class="drone-paths">
+    <path id="path1" d="M -10,120 C 200,20 400,220 1100,80" />
+    <path id="path2" d="M 1200,300 C 800,380 600,180 0,260" />
+  </svg>
 
-<!-- Animated Flight Path -->
-<svg class="drone-path" viewBox="0 0 500 200">
-  <path d="M10 150 C150 20, 350 20, 490 150" />
-</svg>
+  <!-- DRONES -->
+  <div class="drone drone-1">
+    <div class="propellers"></div>
+    <div class="shadow"></div>
+  </div>
+
+  <div class="drone drone-2">
+    <div class="propellers"></div>
+    <div class="shadow"></div>
+  </div>
 
   <!-- HERO -->
   <section class="hero">
@@ -84,7 +92,6 @@
 
       <div class="card-grid-3">
 
-        <!-- SERVICE CARD 1 -->
         <article class="service-card hover-glow">
           <h3 class="service-card-title">Precision Spraying & Application</h3>
           <p class="service-card-text">
@@ -99,7 +106,6 @@
           <button class="link-button" id="openModalSpray">Request Spraying Quote →</button>
         </article>
 
-        <!-- SERVICE CARD 2 -->
         <article class="service-card hover-glow">
           <h3 class="service-card-title">Aerial Mapping & Documentation</h3>
           <p class="service-card-text">
@@ -113,7 +119,6 @@
           <button class="link-button" id="openModalMap">Schedule a Mapping Flight →</button>
         </article>
 
-        <!-- SERVICE CARD 3 -->
         <article class="service-card hover-glow">
           <h3 class="service-card-title">Industrial & Infrastructure Inspection</h3>
           <p class="service-card-text">
@@ -129,7 +134,6 @@
 
       </div>
 
-      <!-- SERVICES IMAGE STRIP -->
       <div class="image-strip">
         <div class="image-square hover-glow">
           <img src="images/gallery1.jpeg" alt="Drone spraying field">
@@ -146,82 +150,79 @@
   </section>
 
   <!-- AQUATIC -->
-  <section class="section section-alt" id="aquatic">
-    <div class="container">
+ <section class="section section-alt" id="aquatic">
+  <div class="container">
 
-      <div class="section-header">
-        <p class="section-kicker">Precision Aquatic Management</p>
-        <h2 class="section-title">Healthy Waters, Managed Right</h2>
-        <p class="section-subtitle">
-          Targeted treatments, shoreline protection, and data‑driven pond insights.
+    <div class="section-header">
+      <p class="section-kicker">Precision Aquatic Management</p>
+      <h2 class="section-title">Healthy Waters, Managed Right</h2>
+      <p class="section-subtitle">
+        Early detection is the key to cost‑effective control. DroneTech Solutions identifies invasive species
+        before they take over your pond or lake.
+      </p>
+    </div>
+
+    <!-- TEXT BLOCK (like other sections) -->
+    <div class="split-main hover-glow">
+      <h3 class="split-title">The DroneTech Advantage</h3>
+
+      <ul class="service-list">
+        <li><span class="service-dot"></span>
+          <strong>Targeted Weed Management:</strong> Aquatic‑approved treatments to manage invasive growth while protecting surrounding habitats.
+        </li>
+        <li><span class="service-dot"></span>
+          <strong>Infrastructure Audits:</strong> Thermal imaging to identify irrigation leaks, dam seepage, or temperature gradients.
+        </li>
+        <li><span class="service-dot"></span>
+          <strong>Shoreline Preservation:</strong> Aerial application eliminates rutting and damage from heavy ground rigs.
+        </li>
+      </ul>
+
+      <div class="callout-box">
+        <h4>Take the Next Step</h4>
+        <p>
+          Schedule your free pond assessment today—let us walk your pond and demonstrate how our
+          data‑driven approach can lower your input costs.
+        </p>
+        <p class="callout-note">
+          <strong>Farm Bureau Member Appreciation:</strong> 10% discount on all spraying services.
         </p>
       </div>
-
-      <div class="split-layout">
-
-        <div class="split-main hover-glow">
-          <h3 class="split-title">The DroneTech Advantage</h3>
-
-          <ul class="service-list">
-            <li><span class="service-dot"></span>
-              <strong>Targeted Weed Management:</strong> Aquatic‑approved treatments to manage invasive growth while protecting surrounding habitats.
-            </li>
-            <li><span class="service-dot"></span>
-              <strong>Infrastructure Audits:</strong> Thermal imaging to identify irrigation leaks, dam seepage, or temperature gradients.
-            </li>
-            <li><span class="service-dot"></span>
-              <strong>Shoreline Preservation:</strong> Aerial application eliminates rutting and damage from heavy ground rigs.
-            </li>
-          </ul>
-
-          <div class="callout-box">
-            <h4>Take the Next Step</h4>
-            <p>
-              Schedule your free pond assessment today—let us walk your pond and demonstrate how our
-              data‑driven approach can lower your input costs.
-            </p>
-            <p class="callout-note">
-              <strong>Farm Bureau Member Appreciation:</strong> 10% discount on all spraying services.
-            </p>
-          </div>
-        </div>
-
-        <aside class="split-side hover-glow">
-          <h4 class="split-side-title">Talk with the Team</h4>
-          <p class="split-side-text">Ready to elevate your operation?</p>
-
-          <p class="split-side-contact">
-            <strong>Contact:</strong><br>
-            Ronnie Denton — (903) 477‑1798<br>
-            Jake Messer — (936) 238‑9633
-          </p>
-
-          <p class="split-side-text">
-            <strong>Service Area:</strong> Southeast Texas
-          </p>
-
-          <button class="btn btn-primary" id="openModalAquatic">Book a Pond Assessment</button>
-        </aside>
-
-      </div>
-
-      <!-- AQUATIC IMAGE STRIP -->
-      <div class="image-strip">
-        <div class="image-square hover-glow">
-          <img src="images/aquatic-1.jpg" alt="Pond aerial view">
-        </div>
-        <div class="image-square hover-glow">
-          <img src="images/aquatic-2.jpg" alt="Aquatic vegetation">
-        </div>
-        <div class="image-square hover-glow">
-          <img src="images/aquatic-3.jpg" alt="Drone over water">
-        </div>
-      </div>
-
     </div>
+
+    <!-- IMAGE GRID UNDER TEXT (like other sections) -->
+    <div class="card-grid-4 aquatic-species-grid">
+      <article class="species-card hover-glow">
+        <img src="images/hydrilla.png" alt="Hydrilla">
+        <h4>Hydrilla</h4>
+        <p>Forms thick underwater jungles; starves fish of oxygen.</p>
+      </article>
+
+      <article class="species-card hover-glow">
+        <img src="images/water hyacinth.png" alt="Water Hyacinth">
+        <h4>Water Hyacinth</h4>
+        <p>Rapid growth; covers water in a dense floating carpet.</p>
+      </article>
+
+      <article class="species-card hover-glow">
+        <img src="images/alligator.png" alt="Alligator Weed">
+        <h4>Alligator Weed</h4>
+        <p>Resilient, mat‑forming; dominates shorelines.</p>
+      </article>
+
+      <article class="species-card hover-glow">
+        <img src="images/salvinia.png" alt="Giant Salvinia">
+        <h4>Giant Salvinia</h4>
+        <p>Blocks sunlight; suffocates entire pond ecosystems.</p>
+      </article>
+    </div>
+
+  </div>
+</section>
+
   </section>
 
-  <!-- SOLAR (STATIC CARDS) -->
+  <!-- SOLAR -->
   <section class="section" id="solar">
     <div class="container">
 
@@ -249,8 +250,6 @@
       </div>
 
       <div class="card-grid-4">
-
-        <!-- STATIC CARD 1 -->
         <article class="pricing-card hover-glow">
           <h3 class="pricing-title">Tier 1: Small Array</h3>
           <p class="pricing-sub">1 – 15 Panels</p>
@@ -261,7 +260,6 @@
           <p class="pricing-price">Pricing: <strong>Fill in</strong></p>
         </article>
 
-        <!-- STATIC CARD 2 -->
         <article class="pricing-card hover-glow">
           <h3 class="pricing-title">Tier 2: Standard Residential</h3>
           <p class="pricing-sub">16 – 30 Panels • Most Popular</p>
@@ -272,7 +270,6 @@
           <p class="pricing-price">Pricing: <strong>Fill in</strong></p>
         </article>
 
-        <!-- STATIC CARD 3 -->
         <article class="pricing-card hover-glow">
           <h3 class="pricing-title">Tier 3: Large / Estate Array</h3>
           <p class="pricing-sub">31 – 50 Panels</p>
@@ -283,7 +280,6 @@
           <p class="pricing-price">Pricing: <strong>Fill in</strong></p>
         </article>
 
-        <!-- STATIC CARD 4 -->
         <article class="pricing-card hover-glow">
           <h3 class="pricing-title">Custom / Large Estate</h3>
           <p class="pricing-sub">51+ Panels</p>
@@ -293,10 +289,8 @@
           </p>
           <p class="pricing-price">Pricing: <strong>Fill in</strong></p>
         </article>
-
       </div>
 
-      <!-- SOLAR IMAGE STRIP -->
       <div class="image-strip">
         <div class="image-square hover-glow">
           <img src="images/gallery2.jpeg" alt="Solar array">
@@ -312,8 +306,8 @@
     </div>
   </section>
 
-  <!-- WILDLIFE (STATIC CARDS) -->
-  <section class="section section-alt" id="wildlife">
+  <!-- WILDLIFE -->
+  <section class="section" id="wildlife">
     <div class="container">
 
       <div class="section-header">
@@ -326,7 +320,6 @@
       </div>
 
       <div class="card-grid-4">
-
         <article class="pricing-card hover-glow">
           <h3 class="pricing-title">Mobilization Fee</h3>
           <p class="pricing-summary">
@@ -362,10 +355,8 @@
           </p>
           <p class="pricing-price">Pricing: <strong>Fill in</strong></p>
         </article>
-
       </div>
 
-      <!-- WILDLIFE IMAGE STRIP -->
       <div class="image-strip">
         <div class="image-square hover-glow">
           <img src="images/IMG_3685.png" alt="Thermal wildlife scan">
@@ -382,112 +373,99 @@
   </section>
 
   <!-- ABOUT -->
- <section class="section" id="about">
-  <div class="container">
+  <section class="section section-alt" id="about">
+    <div class="container">
 
-    <div class="section-header">
-      <p class="section-kicker">About Us</p>
-      <h2 class="section-title">Meet the Team</h2>
-      <p class="section-subtitle">
-        Two operators. One mission: safe, professional, data‑driven drone operations across Southeast Texas.
-      </p>
-    </div>
-
-    <!-- ABOUT GRID -->
-    <div class="about-grid">
-
-      <!-- RONNIE -->
-      <article class="about-card hover-glow">
-        <div class="about-headshot-wrapper">
-          <img class="about-headshot-img" src="images/IMG_1343.jpeg" alt="Ronnie Denton Headshot">
-        </div>
-
-        <h3 class="about-name">Ronnie Denton</h3>
-        <p class="about-role">FAA Certified UAS Pilot</p>
-
-        <p class="about-text">
-          Ronnie specializes in agricultural spraying, aquatic vegetation management, and solar diagnostics.
-          With years of field experience, he brings precision, safety, and consistency to every operation.
+      <div class="section-header">
+        <p class="section-kicker">About Us</p>
+        <h2 class="section-title">Meet the Team</h2>
+        <p class="section-subtitle">
+          Two operators. One mission: safe, professional, data‑driven drone operations across Southeast Texas.
         </p>
+      </div>
 
-        <p class="about-text">
-          Phone: (903) 477‑1798
-        </p>
-      </article>
+      <div class="about-grid">
 
-      <!-- JAKE -->
-      <article class="about-card hover-glow">
-        <div class="about-headshot-wrapper">
+        <article class="about-card hover-glow">
+          <div class="about-headshot-wrapper">
+            <img class="about-headshot-img" src="images/IMG_1343.jpeg" alt="Ronnie Denton Headshot">
+          </div>
+
+          <h3 class="about-name">Ronnie Denton</h3>
+          <p class="about-role">FAA Certified UAS Pilot</p>
+
+          <p class="about-text">
+            Ronnie specializes in agricultural spraying, aquatic vegetation management, and solar diagnostics.
+            With years of field experience, he brings precision, safety, and consistency to every operation.
+          </p>
+
+          <p class="about-text">
+            Phone: (903) 477‑1798
+          </p>
+        </article>
+
+        <article class="about-card hover-glow">
+          <div class="about-headshot-wrapper">
           <img class="about-headshot-img" src="images/IMG_2689.jpeg" alt="Jake Messer Headshot">
-        </div>
+          </div>
 
-        <h3 class="about-name">Jake Messer</h3>
-        <p class="about-role">FAA Certified UAS Pilot</p>
+          <h3 class="about-name">Jake Messer</h3>
+          <p class="about-role">FAA Certified UAS Pilot</p>
 
-        <p class="about-text">
-          Jake leads thermal imaging, wildlife reconnaissance, and infrastructure inspections. His technical
-          background ensures accurate data capture and actionable reporting.
-        </p>
+          <p class="about-text">
+            Jake leads thermal imaging, wildlife reconnaissance, and infrastructure inspections. His technical
+            background ensures accurate data capture and actionable reporting.
+          </p>
 
-        <p class="about-text">
-          Phone: (936) 238‑9633
-        </p>
-      </article>
+          <p class="about-text">
+            Phone: (936) 238‑9633
+          </p>
+        </article>
+
+      </div>
 
     </div>
-
-  </div>
-</section>
-
+  </section>
 
   <!-- FOOTER -->
-    <!-- FOOTER -->
   <footer class="footer">
-  <div class="container footer-inner">
+    <div class="container footer-inner">
 
-    <!-- LEFT COLUMN -->
-    <div class="footer-col footer-branding">
-      <img class="footer-logo" src="images/Dronetechlogo.jpeg" alt="DroneTech Solutions Logo">
+      <div class="footer-col footer-branding">
+        <img class="footer-logo" src="images/Dronetechlogo.jpeg" alt="DroneTech Solutions Logo">
+        <p class="footer-brand">DroneTech Solutions</p>
+        <p class="footer-desc">
+          Serving Southeast Texas with professional, data‑driven drone operations for land, water, solar, and wildlife.
+        </p>
+      </div>
 
-      <p class="footer-brand">DroneTech Solutions</p>
+      <div class="footer-col footer-contact">
+        <p class="footer-heading">Contact</p>
+        <p class="footer-text">
+          1581 Cooks Road<br>
+          Silsbee, Texas 77656
+        </p>
+        <p class="footer-text">
+          Phone: (903) 477‑1798<br>
+          Phone: (936) 238‑9633
+        </p>
+      </div>
 
-      <p class="footer-desc">
-        Serving Southeast Texas with professional, data‑driven drone operations for land, water, solar, and wildlife.
-      </p>
+      <div class="footer-col footer-nav">
+        <p class="footer-heading">Navigation</p>
+        <a href="#services">Services</a>
+        <a href="#aquatic">Aquatic</a>
+        <a href="#solar">Solar</a>
+        <a href="#wildlife">Wildlife</a>
+        <a href="#about">About</a>
+      </div>
+
     </div>
 
-    <!-- MIDDLE COLUMN -->
-    <div class="footer-col footer-contact">
-      <p class="footer-heading">Contact</p>
-
-      <p class="footer-text">
-        1581 Cooks Road<br>
-        Silsbee, Texas 77656
-      </p>
-
-      <p class="footer-text">
-        Phone: (903) 477‑1798<br>
-        Phone: (936) 238‑9633
-      </p>
+    <div class="footer-bottom">
+      © <span id="year"></span> DroneTech Solutions. All rights reserved.
     </div>
-
-    <!-- RIGHT COLUMN -->
-    <div class="footer-col footer-nav">
-      <p class="footer-heading">Navigation</p>
-
-      <a href="#services">Services</a>
-      <a href="#aquatic">Aquatic</a>
-      <a href="#solar">Solar</a>
-      <a href="#wildlife">Wildlife</a>
-      <a href="#about">About</a>
-    </div>
-
-  </div>
-
-  <div class="footer-bottom">
-    © <span id="year"></span> DroneTech Solutions. All rights reserved.
-  </div>
-</footer>
+  </footer>
 
   <!-- FLOATING CONTACT BUTTON -->
   <button class="floating-contact" id="floatingContactBtn">
@@ -504,49 +482,210 @@
       </p>
 
       <form class="modal-form" id="contactForm">
+
+        <!-- 1. Contact & Business Information -->
         <div class="modal-field">
-          <label for="name">Name</label>
-          <input id="name" name="name" type="text" required />
+          <label for="fullName">Full Name / Primary Contact</label>
+          <input id="fullName" name="fullName" type="text" required />
         </div>
 
         <div class="modal-field">
-          <label for="email">Email</label>
+          <label for="company">Company Name (Optional)</label>
+          <input id="company" name="company" type="text" />
+        </div>
+
+        <div class="modal-field">
+          <label for="email">Email Address</label>
           <input id="email" name="email" type="email" required />
         </div>
 
         <div class="modal-field">
-          <label for="phone">Phone</label>
-          <input id="phone" name="phone" type="tel" />
+          <label for="phone">Phone Number</label>
+          <input id="phone" name="phone" type="tel" required />
         </div>
 
         <div class="modal-field">
-          <label for="service">Service Type</label>
-          <select id="service" name="service">
-            <option value="spraying">Precision Spraying</option>
-            <option value="mapping">Aerial Mapping</option>
-            <option value="inspection">Industrial Inspection</option>
+          <label for="contactMethod">Preferred Method of Contact</label>
+          <select id="contactMethod" name="contactMethod">
+            <option value="email">Email</option>
+            <option value="phone">Phone</option>
+          </select>
+        </div>
+
+        <!-- 2. Project Location & Logistics -->
+        <div class="modal-field">
+          <label for="location">Project Address or GPS Coordinates</label>
+          <input id="location" name="location" type="text" required />
+        </div>
+
+        <div class="modal-field">
+          <label for="timeline">Estimated Project Timeline</label>
+          <select id="timeline" name="timeline">
+            <option value="asap">ASAP</option>
+            <option value="30days">Within 30 Days</option>
+            <option value="flexible">Flexible</option>
+          </select>
+        </div>
+
+        <!-- 3. Scope of Work & Drone Specifications -->
+        <div class="modal-field">
+          <label for="industry">Industry Type</label>
+          <select id="industry" name="industry">
+            <option value="agriculture">Agriculture</option>
+            <option value="construction">Construction</option>
+            <option value="realestate">Real Estate</option>
+            <option value="infrastructure">Infrastructure</option>
             <option value="aquatic">Aquatic Management</option>
             <option value="solar">Solar Diagnostics</option>
             <option value="wildlife">Wildlife Operations</option>
+            <option value="other">Other</option>
           </select>
         </div>
 
         <div class="modal-field">
-          <label for="details">Project Details</label>
-          <textarea id="details" name="details" rows="4"></textarea>
+          <label for="propertySize">Estimated Property Size</label>
+          <select id="propertySize" name="propertySize">
+            <option value="under10">Under 10 Acres</option>
+            <option value="10to50">10–50 Acres</option>
+            <option value="50to200">50–200 Acres</option>
+            <option value="200plus">200+ Acres</option>
+          </select>
+        </div>
+
+        <div class="modal-field">
+          <label for="chemicals">For Spraying: Who Provides Chemicals?</label>
+          <select id="chemicals" name="chemicals">
+            <option value="client">Client Provides Chemicals</option>
+            <option value="dronetech">DroneTech Provides Chemicals</option>
+            <option value="na">Not Applicable</option>
+          </select>
+        </div>
+
+        <div class="modal-field">
+          <label for="deliverables">Required Deliverables</label>
+          <select id="deliverables" name="deliverables" multiple>
+            <option value="photo">High‑Res Photo/Video</option>
+            <option value="orthomosaic">Orthomosaic Maps</option>
+            <option value="thermal">Thermal Imaging</option>
+            <option value="multispectral">Multispectral</option>
+            <option value="3d">3D Models</option>
+            <option value="raw">Raw Data</option>
+          </select>
+          <small class="modal-note">Hold CTRL (Windows) or CMD (Mac) to select multiple.</small>
+        </div>
+
+        <!-- 4. Processing & Turnaround -->
+        <div class="modal-field">
+          <label for="turnaround">Processing & Turnaround Time</label>
+          <select id="turnaround" name="turnaround">
+            <option value="standard">Standard (3–5 Business Days)</option>
+            <option value="expedited">Expedited (24–48 Hours)</option>
+          </select>
+        </div>
+
+        <!-- 5. Open‑Ended Project Details -->
+        <div class="modal-field">
+          <label for="details">Additional Project Details</label>
+          <textarea id="details" name="details" rows="4" placeholder="Terrain notes, hazards, focus areas, special instructions..."></textarea>
         </div>
 
         <button class="btn btn-primary btn-full" type="submit">Submit Request</button>
+
+        <p class="modal-disclaimer">
+          <strong>Because DroneTech Solutions are custom‑tailored to your specific project demands, terrain, and data requirements, we provide an optimized, custom quote within 24–48 hours.</strong>
+        </p>
+
       </form>
     </div>
   </div>
 
- <!-- LOGO PLACEHOLDER -->
-      <div class="logo-wrapper">
-        <img class="logo-img" src="images/Dronetechlogo.jpeg" alt="Company Logo">
+  <!-- SCRIPTS -->
+  <script>
+    function scrollToSection(id) {
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
 
-        <span class="logo-text">DroneTech Solutions</span>
-      </div>
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggle = document.querySelector('.theme-toggle');
+      const body = document.body;
+
+      const updateToggleIcon = () => {
+        if (body.classList.contains('dark')) {
+          toggle.textContent = '🌙';
+        } else if (body.classList.contains('light')) {
+          toggle.textContent = '☀️';
+        } else {
+          toggle.textContent = '🌓';
+        }
+      };
+
+      if (toggle) {
+        toggle.addEventListener('click', () => {
+          if (body.classList.contains('system')) {
+            body.classList.remove('system');
+            body.classList.add('light');
+          } else if (body.classList.contains('light')) {
+            body.classList.remove('light');
+            body.classList.add('dark');
+          } else {
+            body.classList.remove('dark');
+            body.classList.add('system');
+          }
+          updateToggleIcon();
+        });
+
+        updateToggleIcon();
+      }
+
+      const yearSpan = document.getElementById('year');
+      if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+      }
+    });
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const modalBackdrop = document.getElementById('modalBackdrop');
+      const modalClose = document.getElementById('modalClose');
+
+      const modalButtons = [
+        'openModalNav',
+        'openModalHero',
+        'openModalSpray',
+        'openModalMap',
+        'openModalInfra',
+        'floatingContactBtn'
+      ];
+
+      modalButtons.forEach(id => {
+        const btn = document.getElementById(id);
+        if (btn) {
+          btn.addEventListener('click', () => {
+            modalBackdrop.style.display = 'flex';
+          });
+        }
+      });
+
+      if (modalClose) {
+        modalClose.addEventListener('click', () => {
+          modalBackdrop.style.display = 'none';
+        });
+      }
+
+      if (modalBackdrop) {
+        modalBackdrop.addEventListener('click', (e) => {
+          if (e.target === modalBackdrop) {
+            modalBackdrop.style.display = 'none';
+          }
+        });
+      }
+    });
+  </script>
 
 </body>
 </html>
+
