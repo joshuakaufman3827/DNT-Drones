@@ -3,15 +3,33 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalClose = document.getElementById('modalClose');
 
   // All buttons that should open the modal
-  const modalButtons = [
-    'openModalNav',
-    'openModalHero',
-    'openModalSpray',
-    'openModalMap',
-    'openModalInfra',
-    'openModalAquatic',
-    'floatingContactBtn'
-  ];
+ const modalButtons = [
+  // Existing buttons
+  'openModalNav',
+  'openModalHero',
+  'openModalSpray',
+  'openModalMap',
+  'openModalInfra',
+  'floatingContactBtn',
+
+  // Aquatic
+  'openModalAquatic1',
+  'openModalAquatic2',
+  'openModalAquatic3',
+  'openModalAquatic4',
+
+  // Solar
+  'openModalSolar1',
+  'openModalSolar2',
+  'openModalSolar3',
+  'openModalSolar4',
+
+  // Wildlife
+  'openModalWildLife1',
+  'openModalWildLife2',
+  'openModalWildLife3',
+  'openModalWildLife4'
+];
 
   modalButtons.forEach(id => {
     const btn = document.getElementById(id);

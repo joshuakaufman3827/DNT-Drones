@@ -196,38 +196,41 @@
         <img src="images/hydrilla.png" alt="Hydrilla">
         <h4>Hydrilla</h4>
         <p>Forms thick underwater jungles; starves fish of oxygen.</p>
+        <button class="link-button" id="openModalAquatic1">Request a Quote →</button>
+
       </article>
 
       <article class="species-card hover-glow">
         <img src="images/water hyacinth.png" alt="Water Hyacinth">
         <h4>Water Hyacinth</h4>
         <p>Rapid growth; covers water in a dense floating carpet.</p>
+        <button class="link-button" id="openModalAquatic2">Request a Quote →</button>
       </article>
 
       <article class="species-card hover-glow">
         <img src="images/alligator.png" alt="Alligator Weed">
         <h4>Alligator Weed</h4>
         <p>Resilient, mat‑forming; dominates shorelines.</p>
+        <button class="link-button" id="openModalAquatic3">Request a Quote →</button>
       </article>
 
       <article class="species-card hover-glow">
         <img src="images/salvinia.png" alt="Giant Salvinia">
         <h4>Giant Salvinia</h4>
         <p>Blocks sunlight; suffocates entire pond ecosystems.</p>
+        <button class="link-button" id="openModalAquatic4">Request a Quote →</button>
       </article>
     </div>
 
   </div>
 </section>
 
-  </section>
-
   <!-- SOLAR -->
   <section class="section" id="solar">
     <div class="container">
 
       <div class="section-header">
-        <p class="section-kicker">Residential Solar Services • 2026 Pricing</p>
+        <p class="section-kicker">Residential Solar Services</p>
         <h2 class="section-title">Maximize Your Solar ROI</h2>
         <p class="section-subtitle">
           Dirty panels and undetected cell failures quietly drain your production. DroneTech Solutions
@@ -257,7 +260,7 @@
             Ideal for small residential systems. Includes a full aerial RGB inspection and a thermal scan
             to identify early‑stage performance issues before they become costly.
           </p>
-          <p class="pricing-price">Pricing: <strong>Fill in</strong></p>
+          <button class="link-button" id="openModalSolar1">Request a Quote →</button>
         </article>
 
         <article class="pricing-card hover-glow">
@@ -267,7 +270,7 @@
             Designed for typical residential systems. Provides a detailed thermal analysis to detect
             malfunctioning cells, plus a complete pure‑water cleaning to restore peak efficiency.
           </p>
-          <p class="pricing-price">Pricing: <strong>Fill in</strong></p>
+          <button class="link-button" id="openModalSolar2">Request a Quote →</button>
         </article>
 
         <article class="pricing-card hover-glow">
@@ -277,7 +280,7 @@
             Built for larger residential systems. Offers a multi‑pass thermal map, string‑level
             malfunction analysis, and a premium digital health report.
           </p>
-          <p class="pricing-price">Pricing: <strong>Fill in</strong></p>
+          <button class="link-button" id="openModalSolar3">Request a Quote →</button>
         </article>
 
         <article class="pricing-card hover-glow">
@@ -287,7 +290,7 @@
             For oversized arrays or multi‑roof systems. Tailored inspection workflows and scalable
             pricing ensure accurate diagnostics for complex installations.
           </p>
-          <p class="pricing-price">Pricing: <strong>Fill in</strong></p>
+          <button class="link-button" id="openModalSolar4">Request a Quote →</button>
         </article>
       </div>
 
@@ -326,7 +329,7 @@
             Covers travel, equipment transport, flight planning, and on‑site setup to ensure safe and
             efficient wildlife operations.
           </p>
-          <p class="pricing-price">Pricing: <strong>Fill in</strong></p>
+          <button class="link-button" id="openModalWildLife1">Request a Quote →</button>
         </article>
 
         <article class="pricing-card hover-glow">
@@ -335,7 +338,7 @@
             Up to four hours of on‑site flight time for targeted wildlife surveys, herd tracking, or
             property‑wide reconnaissance.
           </p>
-          <p class="pricing-price">Pricing: <strong>Fill in</strong></p>
+          <button class="link-button" id="openModalWildLife2">Request a Quote →</button>
         </article>
 
         <article class="pricing-card hover-glow">
@@ -344,7 +347,7 @@
             Extended flight operations for large properties, multi‑zone surveys, or complex herd
             management objectives.
           </p>
-          <p class="pricing-price">Pricing: <strong>Fill in</strong></p>
+          <button class="link-button" id="openModalWildLife3">Request a Quote →</button>
         </article>
 
         <article class="pricing-card hover-glow">
@@ -353,7 +356,7 @@
             Tailored operations for unique properties, specialized herd objectives, or multi‑day
             reconnaissance campaigns.
           </p>
-          <p class="pricing-price">Pricing: <strong>Fill in</strong></p>
+          <button class="link-button" id="openModalWildLife4">Request a Quote →</button>
         </article>
       </div>
 
@@ -647,44 +650,53 @@
     });
   </script>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const modalBackdrop = document.getElementById('modalBackdrop');
-      const modalClose = document.getElementById('modalClose');
+ <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const modalBackdrop = document.getElementById('modalBackdrop');
+    const modalClose = document.getElementById('modalClose');
 
-      const modalButtons = [
-        'openModalNav',
-        'openModalHero',
-        'openModalSpray',
-        'openModalMap',
-        'openModalInfra',
-        'floatingContactBtn'
-      ];
+    // 1. Any button that should open the modal:
+    //    - All .link-button (quote buttons)
+    //    - Nav "Request a Quote"
+    //    - Hero "Request a Quote"
+    //    - Floating contact button
+    const triggerSelectors = [
+      '.link-button',
+      '#openModalNav',
+      '#openModalHero',
+      '#floatingContactBtn'
+    ];
 
-      modalButtons.forEach(id => {
-        const btn = document.getElementById(id);
-        if (btn) {
-          btn.addEventListener('click', () => {
+    triggerSelectors.forEach(selector => {
+      const elements = document.querySelectorAll(selector);
+      elements.forEach(el => {
+        el.addEventListener('click', () => {
+          if (modalBackdrop) {
             modalBackdrop.style.display = 'flex';
-          });
-        }
-      });
-
-      if (modalClose) {
-        modalClose.addEventListener('click', () => {
-          modalBackdrop.style.display = 'none';
-        });
-      }
-
-      if (modalBackdrop) {
-        modalBackdrop.addEventListener('click', (e) => {
-          if (e.target === modalBackdrop) {
-            modalBackdrop.style.display = 'none';
           }
         });
-      }
+      });
     });
-  </script>
+
+    // 2. Close button
+    if (modalClose) {
+      modalClose.addEventListener('click', () => {
+        if (modalBackdrop) {
+          modalBackdrop.style.display = 'none';
+        }
+      });
+    }
+
+    // 3. Click outside modal to close
+    if (modalBackdrop) {
+      modalBackdrop.addEventListener('click', (e) => {
+        if (e.target === modalBackdrop) {
+          modalBackdrop.style.display = 'none';
+        }
+      });
+    }
+  });
+</script>
 
 </body>
 </html>
