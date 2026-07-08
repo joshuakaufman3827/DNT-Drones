@@ -125,4 +125,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
+<script>
+document.querySelectorAll('.accordion-header').forEach(header => {
+  header.addEventListener('click', () => {
+    const body = header.nextElementSibling;
+
+    // Toggle visibility
+    body.style.display = body.style.display === 'block' ? 'none' : 'block';
+  });
+});
+</script>
+
+
 

@@ -559,6 +559,88 @@ body {
   margin-bottom: 8px;
 }
 
+/* ACCORDION WRAPPER */
+.services-accordion {
+  margin-top: 40px;
+}
+
+/* EACH ACCORDION ITEM */
+.accordion-item {
+  margin-bottom: 12px;
+  border: 1px solid rgba(0,255,0,0.3);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* HEADER BUTTON */
+.accordion-header {
+  width: 100%;
+  text-align: left;
+  padding: 16px 20px;
+  background: rgba(0,0,0,0.6);
+  color: #00ff00;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: background 0.25s ease;
+}
+
+.accordion-header:hover {
+  background: rgba(0,255,0,0.15);
+}
+
+/* COLLAPSIBLE BODY */
+.accordion-body {
+  display: none; /* THIS is what collapses the content */
+  padding: 20px;
+  background: rgba(2,6,23,0.85);
+}
+
+.service-dashboard {
+  margin: 60px 0;
+  text-align: center;
+}
+
+.dashboard-title {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  color: #00ff00;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.dashboard-card {
+  padding: 20px;
+  background: rgba(0,0,0,0.6);
+  border: 1px solid rgba(0,255,0,0.3);
+  border-radius: 10px;
+  text-decoration: none;
+  color: #fff;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 18px rgba(0,255,0,0.45);
+}
+
+.dashboard-card h3 {
+  margin-bottom: 8px;
+  color: #00ff00;
+}
+
+.dashboard-card p {
+  opacity: 0.85;
+  font-size: 0.9rem;
+}
+
+
 /* =========================================================
    FOOTER
    ========================================================= */
