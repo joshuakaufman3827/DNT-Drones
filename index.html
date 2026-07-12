@@ -19,6 +19,7 @@
       </div>
 
       <nav class="nav-links">
+        <button id="openModalNav" class="nav-link">Request a Quote</button>
         <button class="nav-link" onclick="scrollToSection('services')">Services</button>
         <button class="nav-link" onclick="scrollToSection('aquatic')">Aquatic</button>
         <button class="nav-link" onclick="scrollToSection('solar')">Solar</button>
@@ -78,40 +79,244 @@
     </div>
   </section>
 
-  <section class="service-dashboard">
+ <section class="service-dashboard">
   <div class="container">
     <h2 class="dashboard-title">What service are you looking for?</h2>
 
+    <!-- Modal Trigger -->
+    <button id="openQuoteModal" class="dashboard-quote-btn">
+      Request a Quote
+    </button>
+
     <div class="dashboard-grid">
 
-      <a href="#wildlife" class="dashboard-card hover-glow">
-        <h3>Wildlife & Ranch</h3>
-        <p>Thermal herd counts & wildlife detection</p>
-      </a>
+      <!-- Wildlife & Ranch Flip Card -->
+      <div class="flip-card dashboard-card hover-glow">
+        <div class="flip-card-inner">
 
-      <a href="#aquatic" class="dashboard-card hover-glow">
-        <h3>Aquatic Management</h3>
-        <p>Invasive species detection & treatment</p>
-      </a>
+          <!-- FRONT -->
+          <div class="flip-card-front">
+            <h3>Wildlife & Ranch</h3>
+            <p>Thermal herd counts & wildlife detection</p>
 
-      <a href="#solar" class="dashboard-card hover-glow">
-        <h3>Solar Diagnostics</h3>
-        <p>Thermal inspections & panel cleaning</p>
-      </a>
+            <div class="flip-images">
+              <img src="images/placeholder1.jpg" alt="Placeholder">
+              <img src="images/placeholder2.jpg" alt="Placeholder">
+              <img src="images/placeholder3.jpg" alt="Placeholder">
+              <img src="images/placeholder4.jpg" alt="Placeholder">
+            </div>
+          </div>
 
-      <a href="#spraying" class="dashboard-card hover-glow">
-        <h3>Spraying Services</h3>
-        <p>Precision herbicide & fungicide application</p>
-      </a>
+          <!-- BACK -->
+          <div class="flip-card-back">
+            <h3>Wildlife & Ranch</h3>
+            <p class="price">Starting at $500 per operation</p>
 
-      <a href="#multispectral" class="dashboard-card hover-glow">
-        <h3>Multispectral Imaging</h3>
-        <p>NDVI maps & early crop stress detection</p>
-      </a>
+            <ul class="capabilities">
+              <li>Thermal Herd Counts</li>
+              <li>Wildlife Detection</li>
+              <li>Ranch Security</li>
+            </ul>
+
+            <p class="notes">
+              High‑resolution thermal imaging for livestock counts, wildlife detection, and ranch security.
+            </p>
+
+            <div class="flip-images">
+              <img src="images/placeholder1.jpg" alt="Placeholder">
+              <img src="images/placeholder2.jpg" alt="Placeholder">
+              <img src="images/placeholder3.jpg" alt="Placeholder">
+              <img src="images/placeholder4.jpg" alt="Placeholder">
+            </div>
+
+            <a href="#wildlife" class="cta-btn">View Full Service</a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Aquatic Management Flip Card -->
+      <div class="flip-card dashboard-card hover-glow">
+        <div class="flip-card-inner">
+
+          <!-- FRONT -->
+          <div class="flip-card-front">
+            <h3>Aquatic Management</h3>
+            <p>Invasive species detection & treatment</p>
+
+            <div class="flip-images">
+              <img src="images/placeholder1.jpg" alt="Placeholder">
+              <img src="images/placeholder2.jpg" alt="Placeholder">
+              <img src="images/placeholder3.jpg" alt="Placeholder">
+              <img src="images/placeholder4.jpg" alt="Placeholder">
+            </div>
+          </div>
+
+          <!-- BACK -->
+          <div class="flip-card-back">
+            <h3>Aquatic Management</h3>
+            <p class="price">Starting at $500 per project</p>
+
+            <ul class="capabilities">
+              <li>Targeted Weed Management</li>
+              <li>Infrastructure Audits</li>
+              <li>Shoreline Preservation</li>
+            </ul>
+
+            <p class="notes">
+              Early detection prevents invasive species from overtaking your pond or lake.
+            </p>
+
+            <div class="flip-images">
+              <img src="images/placeholder1.jpg" alt="Placeholder">
+              <img src="images/placeholder2.jpg" alt="Placeholder">
+              <img src="images/placeholder3.jpg" alt="Placeholder">
+              <img src="images/placeholder4.jpg" alt="Placeholder">
+            </div>
+
+            <a href="#aquatic" class="cta-btn">View Full Service</a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Solar Diagnostics Flip Card -->
+      <div class="flip-card dashboard-card hover-glow">
+        <div class="flip-card-inner">
+
+          <!-- FRONT -->
+          <div class="flip-card-front">
+            <h3>Solar Diagnostics</h3>
+            <p>Thermal inspections & panel cleaning</p>
+
+            <div class="flip-images">
+              <img src="images/placeholder1.jpg" alt="Placeholder">
+              <img src="images/placeholder2.jpg" alt="Placeholder">
+              <img src="images/placeholder3.jpg" alt="Placeholder">
+              <img src="images/placeholder4.jpg" alt="Placeholder">
+            </div>
+          </div>
+
+          <!-- BACK -->
+          <div class="flip-card-back">
+            <h3>Solar Diagnostics</h3>
+            <p class="price">Starting at $200 per home</p>
+
+            <ul class="capabilities">
+              <li>Thermal Hotspot Detection</li>
+              <li>Eco‑Friendly Cleaning</li>
+              <li>Performance Recovery</li>
+            </ul>
+
+            <p class="notes">
+              Restore lost efficiency with aerial thermal imaging and eco‑friendly cleaning.
+            </p>
+
+            <div class="flip-images">
+              <img src="images/placeholder1.jpg" alt="Placeholder">
+              <img src="images/placeholder2.jpg" alt="Placeholder">
+              <img src="images/placeholder3.jpg" alt="Placeholder">
+              <img src="images/placeholder4.jpg" alt="Placeholder">
+            </div>
+
+            <a href="#solar" class="cta-btn">View Full Service</a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Spraying Services Flip Card -->
+      <div class="flip-card dashboard-card hover-glow">
+        <div class="flip-card-inner">
+
+          <!-- FRONT -->
+          <div class="flip-card-front">
+            <h3>Spraying Services</h3>
+            <p>Precision herbicide & fungicide application</p>
+
+            <div class="flip-images">
+              <img src="images/placeholder1.jpg" alt="Placeholder">
+              <img src="images/placeholder2.jpg" alt="Placeholder">
+              <img src="images/placeholder3.jpg" alt="Placeholder">
+              <img src="images/placeholder4.jpg" alt="Placeholder">
+            </div>
+          </div>
+
+          <!-- BACK -->
+          <div class="flip-card-back">
+            <h3>Spraying Services</h3>
+            <p class="price">Starting at $300 per project</p>
+
+            <ul class="capabilities">
+              <li>Zero Compaction</li>
+              <li>Spot‑Spraying</li>
+              <li>Rapid Deployment</li>
+            </ul>
+
+            <p class="notes">
+              Targeted herbicide, fungicide, and insecticide applications with zero crop compaction.
+            </p>
+
+            <div class="flip-images">
+              <img src="images/placeholder1.jpg" alt="Placeholder">
+              <img src="images/placeholder2.jpg" alt="Placeholder">
+              <img src="images/placeholder3.jpg" alt="Placeholder">
+              <img src="images/placeholder4.jpg" alt="Placeholder">
+            </div>
+
+            <a href="#spraying" class="cta-btn">View Full Service</a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Multispectral Imaging Flip Card -->
+      <div class="flip-card dashboard-card hover-glow">
+        <div class="flip-card-inner">
+
+          <!-- FRONT -->
+          <div class="flip-card-front">
+            <h3>Multispectral Imaging</h3>
+            <p>NDVI maps & early crop stress detection</p>
+
+            <div class="flip-images">
+              <img src="images/placeholder1.jpg" alt="Placeholder">
+              <img src="images/placeholder2.jpg" alt="Placeholder">
+              <img src="images/placeholder3.jpg" alt="Placeholder">
+              <img src="images/placeholder4.jpg" alt="Placeholder">
+            </div>
+          </div>
+
+          <!-- BACK -->
+          <div class="flip-card-back">
+            <h3>Multispectral Imaging</h3>
+            <ul class="capabilities">
+              <li>NDVI Maps</li>
+              <li>Early Stress Detection</li>
+              <li>Precision Resource Targeting</li>
+            </ul>
+
+            <p class="notes">
+              Multispectral imaging detects crop issues days or weeks before they become visible.
+            </p>
+
+            <div class="flip-images">
+              <img src="images/placeholder1.jpg" alt="Placeholder">
+              <img src="images/placeholder2.jpg" alt="Placeholder">
+              <img src="images/placeholder3.jpg" alt="Placeholder">
+              <img src="images/placeholder4.jpg" alt="Placeholder">
+            </div>
+
+            <a href="#multispectral" class="cta-btn">View Full Service</a>
+          </div>
+
+        </div>
+      </div>
 
     </div>
   </div>
 </section>
+
 
   <!-- ABOUT -->
   <section class="section section-alt" id="about">
@@ -211,6 +416,7 @@
 
   <!-- FLOATING CONTACT BUTTON -->
   <button class="floating-contact" id="floatingContactBtn">
+    <button id="floatingContactBtn" class="floating-contact">Contact</button>
     Request a Quote
   </button>
 

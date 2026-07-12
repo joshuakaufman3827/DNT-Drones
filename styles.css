@@ -7,7 +7,8 @@
   --accent-glow: rgba(34, 197, 94, 0.45);
   --card-bg: #0b1120;
   --border-color: rgba(148, 163, 184, 0.4);
-
+  --accent-green: #22c55e;
+  --accent-green-hover: #16a34a;
   --section-bg: #020617;
   --section-alt-bg: #0f172a;
 }
